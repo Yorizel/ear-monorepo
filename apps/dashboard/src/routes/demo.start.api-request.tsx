@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { edenAdapter } from "@packages/eden";
 async function getNames() {
-  const data = await edenAdapter.get();
+  const data = await edenAdapter.hello.get();
   console.log(data);
   return data;
 }
