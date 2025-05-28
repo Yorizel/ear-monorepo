@@ -1,183 +1,147 @@
-# ✨ Modern Monorepo Template
+<div align="center">
 
-A comprehensive monorepo template built with cutting-edge technologies for building robust and scalable web applications. This template provides a strong foundation for both frontend and backend development, leveraging the power of **pnpm**, **Turbo**, and **Biome** for an efficient developer experience.
+<!-- Example Badges (replace with actual ones) -->
+<img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT">
+<!-- Add more badges like build status, pnpm version, etc. -->
+<!-- e.g. <img src="https://img.shields.io/github/workflow/status/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>/CI?label=build" alt="Build Status"> -->
+<!-- <img src="https://img.shields.io/badge/pnpm-%3E%3D8.0-orange.svg" alt="pnpm version"> -->
+<!-- <img src="https://img.shields.io/badge/bun-%3E%3D1.0-yellow.svg" alt="Bun version"> -->
 
-## 🚀 Features
+</div>
 
-This template comes packed with the following key technologies and features:
+# Project Monorepo
 
-**Monorepo & DX:**
+Welcome to the monorepo for my project! This repository contains several interconnected applications and packages, managed using pnpm workspaces and Turborepo.
 
-*   📦 **pnpm:** Fast, disk space efficient package manager.
-*   ⚡ **Turbo:** High-performance build system for monorepos.
-*   💅 **Biome:** Integrated formatter and linter for consistent code style.
-*   💖 **TypeScript:** Strongly typed code for better maintainability.
+## Structure
 
-**Frontend:**
+This monorepo is structured into two main directories:
 
-*   ⚛️ **React:** A declarative, component-based JavaScript library for building user interfaces.
-*   🚀 **TanStack Suite:**
-    *   **Router:** Type-safe routing library with file-based routing.
-    *   **Query:** Powerful data fetching and caching library.
-    *   **Start:** React meta-framework for SSR, Server Functions, and API routes.
-*   ✨ **Astro:** The web framework for content-driven websites, used here for a static landing page example.
-*   🎨 **Tailwind CSS:** A utility-first CSS framework for rapid styling.
-*   🎨 **shadcn/ui:** Reusable components built with Radix UI and Tailwind CSS.
+-   `apps/`: Contains the core applications.
+-   `packages/`: Contains shared code, libraries, and UI components used across the applications.
 
-**Backend:**
+### Applications (`apps/`)
 
-*   🦊 **Elysia:** Fast and friendly Bun web framework.
-*   🐻 **Bun:** All-in-one JavaScript runtime (used for the backend app).
-*   🌿 **Drizzle ORM:** TypeScript ORM for databases (PostgreSQL/Neon example).
-*   🔒 **Better Auth:** Flexible authentication library integrated with Elysia and Drizzle.
-*   🤝 **Eden:** Elysia client for type-safe API interactions.
-*   🐘 **Neon:** Serverless PostgreSQL database (used via Drizzle/Neon driver).
+| Directory        | Technology                 | Description                                  |
+| :--------------- | :------------------------- | :------------------------------------------- |
+| `apps/blog`      | Astro                      | A static, content-focused blog application.  |
+| `apps/dashboard` | TanStack React Start (SPA) | A dynamic React-based dashboard for managing project data or user interactions. |
+| `apps/docs`      | Astro Starlight            | Comprehensive documentation site for the project. |
+| `apps/landing-page` | Astro                      | A simple, attractive landing page for the project. |
+| `apps/server`    | Elysia (Bun) + Drizzle     | Backend server providing a REST API and handling database interactions.   |
 
-## 📂 Monorepo Structure
+### Packages (`packages/`)
 
-The template is structured into `apps` and `packages` directories:
+| Directory                 | Technology           | Description                                            |
+| :------------------------ | :------------------- | :----------------------------------------------------- |
+| `packages/eden`           | Elysia + Eden        | Type-safe client library for interacting with the Elysia backend. |
+| `packages/typescript-config` | TypeScript           | Shared TypeScript configurations.                      |
+| `packages/ui`             | React + Tailwind/Shadcn | Shared UI component library.                           |
 
-```
-.
-├── apps/             # Contains the main applications
-│   ├── dashboard/    # React app with TanStack Router, Query, Start, Tailwind, shadcn/ui
-│   ├── landing-page/ # Astro app with React, Tailwind, shadcn/ui
-│   └── server/       # Elysia (Bun) backend API with Drizzle, Better Auth
-└── packages/         # Contains shared packages
-    ├── eden/         # Shared Elysia client using Eden
-    ├── typescript-config/ # Shared TypeScript configurations
-    └── ui/           # Shared UI library with shadcn/ui components and Tailwind setup
-```
+## Technologies
 
-## 💡 Getting Started
+This monorepo utilizes a variety of modern technologies:
 
-**Prerequisites:**
+-   **Package Manager:** pnpm
+-   **Monorepo Tool:** Turborepo
+-   **Backend:** Elysia (Bun)
+-   **Database:** PostgreSQL (Neon)
+-   **ORM:** Drizzle ORM
+-   **API Client:** Eden
+-   **Frontend Frameworks:** Astro, React
+-   **React Framework:** TanStack React Start (for `apps/dashboard`)
+-   **Routing:** TanStack Router
+-   **Data Fetching:** TanStack Query
+-   **Styling:** Tailwind CSS, Shadcn UI
+-   **Linting & Formatting:** Biome
 
-*   **Node.js:** v20 or higher
-*   **pnpm:** v8 or higher (`npm install -g pnpm`)
-*   **Bun:** Latest version (`curl -fsSL https://bun.sh/install | bash`)
+## Getting Started
 
-**Setup:**
+To get the monorepo up and running locally, follow these steps:
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+-   **Node.js**: `^18.0.0` or `^20.0.0` (Check your project's `package.json` engines or your preference)
+-   **pnpm**: `^8.0.0` or latest (Enable corepack with `corepack enable`)
+-   **Bun**: `^1.0.0` or latest (for `apps/server` and potentially other Bun-related tasks)
 
 1.  **Clone the repository:**
+
     ```bash
-    git clone <repository-url>
-    cd <repository-name>
+    git clone <your-repo-url>
+    cd <your-repo-name>
     ```
+
 2.  **Install dependencies:**
+
     ```bash
     pnpm install
     ```
-    Turbo will automatically bootstrap the workspace dependencies.
-3.  **Environment Variables:**
-    Create a `.env` file in the `apps/server` directory based on `apps/server/.env.example` and fill in your database connection URL and Better Auth secret.
+    This will install dependencies for all applications and packages in the monorepo using pnpm workspaces.
+
+3.  **Set up Environment Variables:**
+    Navigate to `apps/server` and create a `.env` file based on the `.env.example`. You will need a PostgreSQL database URL.
     ```bash
     cp apps/server/.env.example apps/server/.env
-    # Edit apps/server/.env with your credentials
+    # Edit apps/server/.env with your database URL and Better Auth secret
     ```
-4.  **Database Setup:**
-    Ensure your PostgreSQL database is running and accessible via the `DATABASE_URL`.
-    Run Drizzle migrations:
+
+4.  **Run Database Migrations:**
+    Ensure your database is configured in `apps/server/.env`.
     ```bash
-    pnpm --filter=server generate # Generates migrations if needed
-    pnpm --filter=server push     # Applies migrations to the database
+    cd apps/server
+    pnpm run push
+    cd ../.. # Go back to the monorepo root
     ```
 
-## 💻 Development
+5.  **Start the development servers:**
 
-To start all applications and packages in development mode:
-
-```bash
-pnpm dev
-```
-
-This command uses Turbo to concurrently run the `dev` script in all configured apps and packages.
-
-*   The **Dashboard** app will be available at `http://localhost:3000`.
-*   The **Landing Page** app will be available at `http://localhost:4321`.
-*   The **Server** app will be available at `http://localhost:9876`.
-
-You can also run individual app/package dev scripts using Turbo:
-
-*   `pnpm dev --filter=dashboard`
-*   `pnpm dev --filter=server`
-*   `pnpm dev --filter=landing-page`
-*   etc.
-
-## 📦 Building for Production
-
-To build all applications and packages for production:
-
-```bash
-pnpm build
-```
-
-This command uses Turbo to build all dependencies in the correct order.
-
-## ✨ Linting and Formatting
-
-This template uses **Biome** for code formatting and linting to ensure a consistent code style across the monorepo.
-
-*   Check for lint errors and formatting issues:
     ```bash
-    pnpm check
+    pnpm dev
     ```
-*   Fix formatting issues automatically:
-    ```bash
-    pnpm format
-    ```
-*   Check for lint errors and attempt to fix them:
-    ```bash
-    pnpm lint
-    ```
+    This command uses Turborepo to concurrently start the development servers for all defined `dev` scripts in the `package.json` files of the apps and packages.
 
-It's highly recommended to install the Biome VS Code extension or configure your editor to automatically format and lint using Biome on save.
+    The applications should be available at:
+    -   Landing Page: `http://localhost:4321` (or as specified by Astro)
+    -   Blog: `http://localhost:4322` (or as specified by Astro)
+    -   Docs: `http://localhost:4323` (or as specified by Astro)
+    -   Dashboard: `http://localhost:3000` (or as specified by Vinxi/TanStack Start)
+    -   Server: `http://localhost:9876` (or as specified by Elysia)
 
-## 🎨 Using shadcn/ui
+## Available Commands
 
-The `packages/ui` directory contains the shared shadcn/ui components and the Tailwind CSS setup.
+You can run scripts defined in the root `package.json` or within individual app/package `package.json` files. Turborepo is configured to optimize running these commands across the monorepo.
 
-To add new components from `shadcn/ui` to the shared `packages/ui`:
+-   `pnpm build`: Build all applications and packages for production.
+-   `pnpm dev`: Start development servers for all applications and packages.
+-   `pnpm lint`: Run linters across all applications and packages.
+-   `pnpm format`: Format code using Biome across the entire monorepo.
 
-```bash
-pnpm dlx shadcn-ui@latest add <component-name> --cwd packages/ui
-```
+You can also run commands for specific apps/packages using the format `pnpm --filter <app-or-package-name> <command>`. For example:
 
-This will add the component files to `packages/ui/src/components`.
+-   `pnpm --filter blog dev`: Start only the blog development server.
+-   `pnpm --filter @packages/ui build`: Build only the UI package.
 
-To use the components in your applications (e.g., in `apps/dashboard` or `apps/landing-page`), import them from the shared package:
+## Deployment
 
-```tsx
-import { Button } from "@packages/ui/components/button";
-// ... usage ...
-<Button>Click me</Button>
-```
+(Details on how to deploy the applications will be added here. This might include instructions for platforms like Vercel, Netlify, Docker, etc., depending on the application type.)
 
-The Tailwind configuration and global styles (`packages/ui/src/styles/globals.css`) are set up to be consumed by the applications.
+## Linting and Formatting
 
-## Learn More
+This project uses [Biome](https://biomejs.dev/) for code linting and formatting. Configuration is managed at the root `biome.json` with overrides in specific app/package directories.
 
-*   [pnpm Documentation](https://pnpm.io/documentation)
-*   [Turbo Documentation](https://turbo.build/repo/docs)
-*   [Biome Documentation](https://biomejs.dev/docs/)
-*   [React Documentation](https://reactjs.org/)
-*   [TanStack Documentation](https://tanstack.com/)
-    *   [TanStack Router](https://tanstack.com/router/latest)
-    *   [TanStack Query](https://tanstack.com/query/latest)
-    *   [TanStack Start](https://tanstack.com/start/latest)
-*   [Astro Documentation](https://docs.astro.build/)
-*   [Tailwind CSS Documentation](https://tailwindcss.com/docs/)
-*   [shadcn/ui Documentation](https://ui.shadcn.com/)
-*   [Elysia Documentation](https://elysiajs.com/introduction.html)
-*   [Bun Documentation](https://bun.sh/docs/)
-*   [Drizzle ORM Documentation](https://orm.drizzle.team/docs/)
-*   [Better Auth Documentation](https://auth.bettertyped.com/)
-*   [Neon Documentation](https://neon.tech/docs/)
+-   `pnpm format`: Formats all code in the monorepo.
+-   `pnpm lint`: Checks for linting issues.
+-   `pnpm check`: Runs format and lint checks.
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request.
+Contributions are welcome! We value your input and effort to improve this project. Please feel free to:
+-   Report a bug
+-   Suggest a feature
+-   Submit a pull request
 
-## License
+For major changes, please open an issue first to discuss what you would like to change. Ensure your code adheres to the linting and formatting guidelines (`pnpm check`).
 
-This project is licensed under the [MIT License](LICENSE).
+---
