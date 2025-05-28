@@ -8,12 +8,12 @@ importers:
 
   .:
     devDependencies:
+      '@biomejs/biome':
+        specifier: 1.9.4
+        version: 1.9.4
       '@packages/typescript-config':
         specifier: workspace:*
         version: link:packages/typescript-config
-      prettier:
-        specifier: ^3.5.1
-        version: 3.5.1
       turbo:
         specifier: ^2.4.2
         version: 2.4.2
@@ -129,9 +129,6 @@ importers:
       react-dom:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
-      tailwindcss:
-        specifier: ^4.1.8
-        version: 4.1.8
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4

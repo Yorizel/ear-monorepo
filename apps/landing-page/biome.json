@@ -2,7 +2,9 @@
 	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
 	"overrides": [
 		{
-			"include": ["*.astro"],
+			"include": [
+				"*.astro"
+			],
 			"linter": {
 				"rules": {
 					"style": {
@@ -13,6 +15,11 @@
 			}
 		}
 	],
+	"json": {
+		"formatter": {
+			"trailingCommas": "none"
+		}
+	},
 	"vcs": {
 		"enabled": false,
 		"clientKind": "git",
