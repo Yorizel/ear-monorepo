@@ -7,6 +7,7 @@ import { db } from "./database";
 import { env } from "@/config/env";
 export const auth = betterAuth({
   secret: env.BETTER_AUTH_SECRET,
+  trustedOrigins: ["http://localhost:3000"],
   emailAndPassword: {
     enabled: true,
   },
@@ -17,14 +18,4 @@ export const auth = betterAuth({
   plugins: [openAPI()],
 });
 
-export const authService = new Elysia().post("/auth/sign-up", async () => {
-  const repsonse = await auth.api.signUpEmail({
-    body: {
-      email: "yorizel@gmail.com",
-      password: "12345678",
-      name: "yorizel",
-    },
-  });
-  console.log(repsonse);
-  return "AIIII";
-});
+export const authService = new Elysia().mount(auth.handler);
