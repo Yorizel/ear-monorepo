@@ -1,27 +1,27 @@
-import { useEffect } from "react";
+import { authClient } from "@/api";
 import { Button } from "@packages/ui/components/button";
 import { createFileRoute } from "@tanstack/react-router";
-import { authClient } from "@/api";
+import { useEffect } from "react";
 async function getNames() {
-  const data = authClient.signUp.email({
-    email: "yorizel@gmail.com",
-    password: "12345678",
-    name: "yorizel",
-  });
-  return data;
+	const data = authClient.signUp.email({
+		email: "yorizel@gmail.com",
+		password: "12345678",
+		name: "yorizel",
+	});
+	return data;
 }
 
 export const Route = createFileRoute("/demo/start/api-request")({
-  component: Home,
+	component: Home,
 });
 function Home() {
-  useEffect(() => {
-    getNames().then();
-  }, []);
+	useEffect(() => {
+		getNames().then();
+	}, []);
 
-  return (
-    <div className="p-4">
-      <Button className="bg-blue-500 text-white">Hello</Button>
-    </div>
-  );
+	return (
+		<div className="p-4">
+			<Button className="bg-blue-500 text-white">Hello</Button>
+		</div>
+	);
 }
