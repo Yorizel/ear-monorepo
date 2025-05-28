@@ -1,9 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-import { createFileRoute } from "@tanstack/react-router";
 import { edenAdapter } from "@packages/eden";
+import { createFileRoute } from "@tanstack/react-router";
 async function getNames() {
-  const data = await edenAdapter.hello.get();
+  const data = await edenAdapter.api.auth["sign-up"].post({
+    email: "yorizel@gmail.com",
+    name: "yorizel",
+    password: "12345678",
+  });
   console.log(data);
   return data;
 }

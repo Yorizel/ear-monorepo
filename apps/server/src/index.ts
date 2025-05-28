@@ -1,12 +1,18 @@
 import cors from "@elysiajs/cors";
 import swagger from "@elysiajs/swagger";
 import { Elysia } from "elysia";
-
+import { authService } from "./lib/auth";
 const app = new Elysia()
-  .use(cors())
+  .use(authService)
+  .use(
+    cors({
+      origin: "http://localhost:3000",
+      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      credentials: true,
+      allowedHeaders: ["Content-Type", "Authorization"],
+    }),
+  )
   .use(swagger())
-  .get("/", () => "Hello Elysia")
-  .get("/hello", () => "Hello Elysia")
   .listen(9876);
 
 console.log(
