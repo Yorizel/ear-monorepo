@@ -9,7 +9,7 @@
 
 </div>
 
-# Project Monorepo
+# Elysiajs Monorepo
 
 Welcome to the monorepo for my project! This repository contains several interconnected applications and packages, managed using pnpm workspaces and Turborepo.
 
