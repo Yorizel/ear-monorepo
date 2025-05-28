@@ -10,7 +10,7 @@ import Header from "../components/Header";
 
 import TanStackQueryLayout from "../integrations/tanstack-query/layout.tsx";
 
-import appCss from "../styles.css?url";
+import appCss from "@packages/ui/globals.css?url";
 
 import type { QueryClient } from "@tanstack/react-query";
 
