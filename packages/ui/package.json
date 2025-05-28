@@ -1,10 +1,10 @@
 {
-  "name": "@workspace/ui",
+  "name": "@packages/ui",
   "version": "0.0.0",
   "type": "module",
   "private": true,
   "scripts": {
-    "lint": "eslint . --max-warnings 0"
+    "check": "biome check"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",

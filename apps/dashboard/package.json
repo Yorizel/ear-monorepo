@@ -13,6 +13,7 @@
     "check": "biome check"
   },
   "dependencies": {
+    "better-auth": "^1.2.8",
     "@tailwindcss/vite": "^4.0.6",
     "@tanstack/react-query": "^5.66.5",
     "@tanstack/react-query-devtools": "^5.66.5",
@@ -24,9 +25,10 @@
     "@tanstack/router-plugin": "^1.114.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwindcss": "^4.0.6",
+    "tailwindcss": "^4.0.8",
     "vinxi": "^0.5.3",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^5.1.4",
+    "@packages/ui": "workspace:*"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -42,4 +44,3 @@
     "web-vitals": "^4.2.4"
   }
 }
-
