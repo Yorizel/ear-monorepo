@@ -5,7 +5,6 @@ import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { openAPI } from "better-auth/plugins";
 import Elysia, { type Context } from "elysia";
 export const auth = betterAuth({
-  secret: "secret",
   emailAndPassword: {
     enabled: true,
   },
@@ -15,14 +14,15 @@ export const auth = betterAuth({
   }),
   plugins: [openAPI()],
 });
-export const betterAuthView = (context: Context) => {
-  const BETTER_AUTH_ACCEPT_METHODS = ["POST", "GET"];
-  if (BETTER_AUTH_ACCEPT_METHODS.includes(context.request.method)) {
-    console.log(context.request);
-    return auth.handler(context.request);
-  }
 
-  context.status(405);
-};
-
-export const authService = new Elysia().all("/api/auth/*", betterAuthView);
+export const authService = new Elysia().post("/auth/sign-up", async () => {
+  const repsonse = await auth.api.signUpEmail({
+    body: {
+      email: "yorizel@gmail.com",
+      password: "12345678",
+      name: "yorizel",
+    },
+  });
+  console.log(repsonse);
+  return "AIIII";
+});
