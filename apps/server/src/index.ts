@@ -2,7 +2,7 @@ import cors from "@elysiajs/cors";
 import swagger from "@elysiajs/swagger";
 import { Elysia } from "elysia";
 import { authService } from "./lib/auth";
-const app = new Elysia({ prefix: "/api" })
+const app = new Elysia()
   .use(authService)
   .use(
     cors({
