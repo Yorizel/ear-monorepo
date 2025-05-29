@@ -3,6 +3,9 @@ import { defineConfig } from "@tanstack/react-start/config";
 import viteTsConfigPaths from "vite-tsconfig-paths";
 
 const config = defineConfig({
+	server: {
+		preset: "vercel",
+	},
 	tsr: {
 		appDirectory: "src",
 	},
