@@ -15,30 +15,15 @@
 			},
 			"formatter": {
 				"enabled": true,
-				"indentStyle": "space",
+				"formatWithErrors": false,
+				"attributePosition": "auto",
+				"indentStyle": "tab",
 				"indentWidth": 2,
-				"lineWidth": 80
+				"lineWidth": 80,
+				"lineEnding": "lf"
 			}
 		}
 	],
-	"json": {
-		"formatter": {
-			"trailingCommas": "none"
-		}
-	},
-	"vcs": {
-		"enabled": false,
-		"clientKind": "git",
-		"useIgnoreFile": false
-	},
-	"files": {
-		"ignoreUnknown": false,
-		"ignore": []
-	},
-	"formatter": {
-		"enabled": true,
-		"indentStyle": "tab"
-	},
 	"organizeImports": {
 		"enabled": true
 	},
