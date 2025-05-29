@@ -1,0 +1,109 @@
+---
+import {
+  Server,
+  Database,
+  Globe,
+  Layers,
+  Package,
+  Zap,
+  Code,
+  FileText,
+  Wrench,
+  Palette,
+} from "@lucide/astro";
+
+const icons = {
+  Server,
+  Database,
+  Globe,
+  Layers,
+  Package,
+  Zap,
+  Code,
+  FileText,
+  Wrench,
+  Palette,
+};
+
+const technologies = [
+  {
+    icon: "Server",
+    name: "Elysia (Bun)",
+    description:
+      "Fast, type-safe backend with automatic OpenAPI generation and lightning-fast performance",
+  },
+  {
+    icon: "Globe",
+    name: "Astro",
+    description:
+      "Static site generation with component islands architecture for optimal performance",
+  },
+  {
+    icon: "Code",
+    name: "React",
+    description:
+      "Modern React with TanStack Router and Query for powerful client-side experiences",
+  },
+  {
+    icon: "Database",
+    name: "Drizzle ORM",
+    description:
+      "Type-safe database operations with PostgreSQL and automatic schema generation",
+  },
+  {
+    icon: "Layers",
+    name: "Turborepo",
+    description:
+      "High-performance build system for monorepos with intelligent caching",
+  },
+  {
+    icon: "Package",
+    name: "pnpm",
+    description:
+      "Fast, disk space efficient package manager with workspace support",
+  },
+  {
+    icon: "Zap",
+    name: "TanStack",
+    description: "Router and Query for powerful state management and routing",
+  },
+  {
+    icon: "Palette",
+    name: "Tailwind CSS",
+    description: "Utility-first CSS framework with Shadcn UI components",
+  },
+];
+---
+
+<section class="min-h-screen md:h-screen snap-start flex items-center justify-center py-12">
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+        Technologies
+      </h2>
+      <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+        Cutting-edge technologies working in perfect harmony to deliver exceptional developer experience and performance
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px ">
+      {
+        technologies.map((tech) => {
+          const Icon = icons[tech.icon as keyof typeof icons];
+          return (
+            <div class="group bg-stone-950 border border-white/10 p-8 hover:bg-stone-950/[0.4] transition-colors duration-300">
+              <div class="mb-6">
+                <Icon class="w-6 h-6 text-white/70 group-hover:text-white transition-colors duration-300" />
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-white transition-colors duration-300">
+                {tech.name}
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                {tech.description}
+              </p>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
