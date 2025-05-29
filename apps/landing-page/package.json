@@ -11,6 +11,7 @@
 	},
 	"dependencies": {
 		"@astrojs/react": "^4.3.0",
+		"@lucide/astro": "^0.511.0",
 		"@packages/ui": "workspace:*",
 		"@tailwindcss/vite": "^4.1.8",
 		"@types/react": "^19.1.6",
@@ -21,7 +22,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"typescript": "^5.7.2",
-		"@packages/typescript-config": "workspace:*"
+		"@packages/typescript-config": "workspace:*",
+		"typescript": "^5.7.2"
 	}
 }
