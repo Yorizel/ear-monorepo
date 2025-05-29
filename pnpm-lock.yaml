@@ -185,6 +185,9 @@ importers:
       '@astrojs/react':
         specifier: ^4.3.0
         version: 4.3.0(@types/node@22.15.23)(@types/react-dom@19.1.5(@types/react@19.1.6))(@types/react@19.1.6)(jiti@2.4.2)(lightningcss@1.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(terser@5.40.0)(tsx@4.19.4)
+      '@lucide/astro':
+        specifier: ^0.511.0
+        version: 0.511.0(astro@5.8.0(@types/node@22.15.23)(db0@0.3.2(drizzle-orm@0.43.1(@neondatabase/serverless@1.0.0)(@opentelemetry/api@1.9.0)(@types/pg@8.15.2)(bun-types@1.2.15)(kysely@0.28.2)))(ioredis@5.6.1)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(terser@5.40.0)(tsx@4.19.4)(typescript@5.7.3))
       '@packages/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -1563,6 +1566,11 @@ packages:
 
   '@levischuck/tiny-cbor@0.2.11':
     resolution: {integrity: sha512-llBRm4dT4Z89aRsm6u2oEZ8tfwL/2l6BwpZ7JcyieouniDECM5AqNgr/y08zalEIvW3RSK4upYyybDcmjXqAow==}
+
+  '@lucide/astro@0.511.0':
+    resolution: {integrity: sha512-Qq3WAQVyL+mMSl8UYJJdfIbhfO/tskRRDWilZcwxazhd+e99KfSbxS1q0xjrCIUN4VFD8W/BCcNasChJqQv/8A==}
+    peerDependencies:
+      astro: ^4 || ^5
 
   '@mapbox/node-pre-gyp@2.0.0':
     resolution: {integrity: sha512-llMXd39jtP0HpQLVI37Bf1m2ADlEb35GYSh1SDSLsBhR+5iCxiNGlT31yqbNtVHygHAtMy6dWFERpU2JgufhPg==}
@@ -8160,6 +8168,10 @@ snapshots:
   '@js-sdsl/ordered-map@4.4.2': {}
 
   '@levischuck/tiny-cbor@0.2.11': {}
+
+  '@lucide/astro@0.511.0(astro@5.8.0(@types/node@22.15.23)(db0@0.3.2(drizzle-orm@0.43.1(@neondatabase/serverless@1.0.0)(@opentelemetry/api@1.9.0)(@types/pg@8.15.2)(bun-types@1.2.15)(kysely@0.28.2)))(ioredis@5.6.1)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(terser@5.40.0)(tsx@4.19.4)(typescript@5.7.3))':
+    dependencies:
+      astro: 5.8.0(@types/node@22.15.23)(db0@0.3.2(drizzle-orm@0.43.1(@neondatabase/serverless@1.0.0)(@opentelemetry/api@1.9.0)(@types/pg@8.15.2)(bun-types@1.2.15)(kysely@0.28.2)))(ioredis@5.6.1)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(terser@5.40.0)(tsx@4.19.4)(typescript@5.7.3)
 
   '@mapbox/node-pre-gyp@2.0.0':
     dependencies:
