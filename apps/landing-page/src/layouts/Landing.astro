@@ -2,26 +2,23 @@
 import "@packages/ui/globals.css";
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overflow-y-scroll snap-y snap-mandatory bg-linear-to-br-from-slate-950 via-orange-950 to-slate-950">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>EAR Stack</title>
 	</head>
-	<body class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-950 via-orange-950 to-slate-950">
+	<body class="relative bg-gradient-to-l from-slate-950 via-orange-950 to-slate-950">
 	  <!-- Enhanced animated background elements -->
-	  <div class="absolute inset-0 w-full h-full">
+	  <div class="fixed inset-0 w-full h-full pointer-events-none">
 	    <div class="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-orange-600/30 rounded-full blur-3xl animate-pulse"></div>
 	    <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-amber-500/25 rounded-full blur-3xl animate-pulse delay-1000"></div>
 	    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-orange-600/15 to-amber-500/15 rounded-full blur-3xl"></div>
 	    <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
 	  </div>
-	
-	  <!-- Enhanced grid overlay -->
-	  <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
-	
+	  <div class="fixed inset-0 h-full bg-[linear-gradient(rgba(255,255,255,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.03)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none"></div>
 	  <slot />
 	</body>
 </html>
