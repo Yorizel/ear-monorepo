@@ -1,0 +1,38 @@
+---
+import { ArrowRight, Sparkles, Star } from "@lucide/astro";
+import { Badge } from "@packages/ui/components/badge";
+import { Button } from "@packages/ui/components/button";
+---
+
+<section>
+  <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+    <Badge className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-900/50 to-amber-900/50 backdrop-blur-lg border border-orange-500/30 rounded-full px-4 py-2 mb-6 shadow-2xl">
+      <span class="text-sm text-gray-200 font-medium">Modern Fullstack Monorepo</span>
+    </Badge>
+    <div class="flex items-center justify-center space-x-3">
+      <Sparkles class="w-10 h-10 text-yellow-400" />
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-white via-orange-200 via-amber-200 to-yellow-200 bg-clip-text text-transparent leading-tight">
+        EAR Stack
+      </h1>
+    </div>
+    
+    <p class="text-lg md:text-xl text-gray-300 mb-3 max-w-3xl mx-auto leading-relaxed font-light">
+      Modern fullstack monorepo powered by 
+      <span class="text-orange-400 font-semibold bg-gradient-to-r from-orange-400 to-orange-300 bg-clip-text text-transparent">Elysia</span>, 
+      <span class="text-blue-400 font-semibold bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent">Astro</span>, and 
+      <span class="text-cyan-400 font-semibold bg-gradient-to-r from-cyan-400 to-cyan-300 bg-clip-text text-transparent">React</span>
+    </p>
+    
+    <p class="text-base text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+      Built with Turborepo, Bun, Drizzle ORM, and modern tooling for scalable, type-safe development
+    </p>
+    
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+      <Button size="lg" className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-orange-400 text-white font-semibold  rounded-lg shadow-md hover:shadow-lg hover:from-orange-600 hover:to-orange-500 transition-all duration-300">
+          <span>Get Started</span>
+          <ArrowRight />
+      </Button>
+    </div>
+  </div>
+</section>
+
