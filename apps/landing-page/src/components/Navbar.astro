@@ -1,0 +1,52 @@
+---
+import { Sparkles } from "@lucide/astro";
+
+const { className = "" } = Astro.props;
+import { navItems } from "../data/navItems";
+---
+
+<section class="snap-start flex items-center justify-center py-6 min-h-[80px] bg-transparent">
+  <nav class={`bg-orange-950/[0.5] flex max-w-fit fixed top-8 inset-x-0 mx-auto border border-orange-500/30 dark:border-white/[0.2] rounded-full z-[5000] items-center justify-center transition-all duration-300  backdrop-blur-lg ${className} px-4 py-2 space-x-4 shadow-2xl`}
+       id="floating-navbar"
+       >
+       <div class="flex items-center justify-center space-x-2">
+        <Sparkles class="w-5 h-5 text-yellow-400" />
+        <h1 class="text-lg md:text-xl font-black bg-gradient-to-r from-white via-orange-200 via-amber-200 to-yellow-200 bg-clip-text text-transparent leading-tight">
+          EAR Stack
+        </h1>
+      </div>
+    {navItems.map((navItem) => (
+      <a
+        href={navItem.link}
+        class="relative items-center flex space-x-2 text-white hover:text-orange-300 font-semibold text-sm transition-colors duration-300 px-3 py-1 rounded-full hover:bg-orange-900/30"
+      >
+        <span>{navItem.name}</span>
+      </a>
+    ))}
+  </nav>
+</section>
+
+<script>
+  // Show navbar only after scrolling past the hero section (min-h-screen)
+  let lastScroll = window.scrollY;
+  const navbar = document.getElementById('floating-navbar');
+  function updateNavbar() {
+    const current = window.scrollY;
+    // Show after 90vh (matches Hero min-h-screen)
+    if (current > window.innerHeight * 0.9) {
+      if (navbar) {
+        navbar.style.opacity = "1";
+        navbar.style.transform = "translateY(0)";
+      }
+    } else {
+      if (navbar) {
+        navbar.style.opacity = "0";
+        navbar.style.transform = "translateY(-40px)";
+      }
+    }
+    lastScroll = current;
+  }
+  window.addEventListener('scroll', updateNavbar, { passive: true });
+  // Initial state
+  updateNavbar();
+</script>
