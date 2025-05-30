@@ -134,6 +134,15 @@ Config in root `biome.json` (with possible per-app overrides).
 
 ---
 
+## TODO
+
+Here are the upcoming tasks:
+
+- [ ] Update to use Bun with Turborepo
+- [ ] Update to Biome 2.0
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome!  
