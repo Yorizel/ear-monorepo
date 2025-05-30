@@ -37,7 +37,7 @@ const items = [
 		gradient: "from-rose-500/10 via-rose-500/5 to-transparent",
 		border: "border-rose-500/20",
 		glow: "shadow-rose-500/10",
-		size: "medium",
+		size: "small",
 		type: "Application",
 	},
 	// --- Packages grouped together ---
@@ -50,7 +50,7 @@ const items = [
 		gradient: "from-teal-500/10 via-teal-500/5 to-transparent",
 		border: "border-teal-500/20",
 		glow: "shadow-teal-500/10",
-		size: "medium",
+		size: "small",
 		type: "Package",
 	},
 	{
@@ -158,13 +158,10 @@ function getSizeClasses(size: string) {
 }
 ---
 
-<section  class="min-h-[90vh] snap-start flex items-center justify-center ">
-  <!-- Enhanced background -->
+<section id="structure"  class="container mx-auto flex flex-col items-cetner justify-center gap-4 min-h-screen snap-start flex items-center justify-center ">
 
-  <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
-    <!-- Header -->
-    <div class="text-center mb-12 md:mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+    <div class="flex flex-col gap-4 items-center text-center">
+      <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
         Architecture
       </h2>
       <p class="text-base md:text-lg text-gray-400 max-w-2xl md:max-w-3xl mx-auto leading-relaxed">
@@ -174,7 +171,7 @@ function getSizeClasses(size: string) {
     </div>
 
     <!-- Perfect Bento Grid -->
-    <div class="grid grid-flow-dense grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 auto-rows-[160px]">
+    <div class="grid grid-flow-dense grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4  auto-rows-[160px]">
       {items.map((item, index) => {
         const sizeClasses = getSizeClasses(item.size);
         const gridClass = getGridClasses(item.size);
@@ -241,7 +238,6 @@ function getSizeClasses(size: string) {
         );
       })}
     </div>
-  </div>
 </section>
 
 <style>
