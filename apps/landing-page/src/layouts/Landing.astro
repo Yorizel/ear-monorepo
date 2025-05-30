@@ -1,5 +1,7 @@
 ---
 import "@packages/ui/globals.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 <!doctype html>
 <html lang="en" class="overflow-y-scroll scroll-smooth snap-y snap-mandatory bg-linear-to-br-from-slate-950 via-orange-950 to-slate-950">
@@ -19,7 +21,9 @@ import "@packages/ui/globals.css";
 	    <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
 	  </div>
 	  <div class="fixed inset-0 h-full bg-[linear-gradient(rgba(255,255,255,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.03)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none"></div>
+	  <Navbar />
 	  <slot />
+	  <Footer />
 	</body>
 </html>
 
