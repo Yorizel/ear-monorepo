@@ -118,21 +118,24 @@ These commands are run from the root of the monorepo:
 - `pnpm lint` — Lint all code across apps and packages using Turborepo (triggers Biome in each package).
 - `pnpm format` — Format all code in the monorepo using Biome (`biome format --write .`).
 
-To run scripts for a specific application or package, use the `pnpm --filter` flag:
+To run scripts for a specific application or package, use the `pnpm --filter` flag. Example:
+
 ```bash
 pnpm --filter <app-or-package-name> <command>
-
-    
-
-IGNORE_WHEN_COPYING_START
-Use code with caution. Markdown
-IGNORE_WHEN_COPYING_END
+```
 
 Examples:
 
-    pnpm --filter blog dev    # Starts only the development server for the blog application.
-    pnpm --filter @packages/ui check    # Runs the check script (Biome) for the @packages/ui library.
-    pnpm --filter elysia-server push    # Runs database migrations for the elysia-server application.
+```bash
+pnpm --filter blog dev
+# Starts only the development server for the blog application.
+
+pnpm --filter @packages/ui check
+# Runs the check script (Biome) for the @packages/ui library.
+
+pnpm --filter elysia-server push
+# Runs database migrations for the elysia-server application.
+```
 
 ---
 
@@ -167,12 +170,11 @@ This uses `turbo lint` which in turn executes the `lint` or `check` script (usua
 
 The README previously mentioned `pnpm check`. If you wish to have a global check command, consider adding a script to your root `package.json`:
 
+Add the following to your root `package.json`:
+
 ```json
-// package.json (root)
 {
-  // ...
   "scripts": {
-    // ...
     "check": "biome check ."
   }
 }
