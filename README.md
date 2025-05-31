@@ -211,5 +211,5 @@ Contributions are highly welcome! Whether it's a feature request, bug report, or
 - Write clear and concise commit messages.
 
 <p align="center">
-<sub>Made with ❤️ by <a href="https://github.com/<YOUR_GITHUB_USERNAME>">@<YOUR_GITHUB_USERNAME></a></sub>
+<sub>Made with ❤️ by <a href="https://github.com/<YOUR_GITHUB_USERNAME>">@Yorizel</a></sub>
 </p>
