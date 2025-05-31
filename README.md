@@ -130,51 +130,44 @@ IGNORE_WHEN_COPYING_END
 
 Examples:
 
-    pnpm --filter blog dev — Starts only the development server for the blog application.
+    pnpm --filter blog dev    # Starts only the development server for the blog application.
+    pnpm --filter @packages/ui check    # Runs the check script (Biome) for the @packages/ui library.
+    pnpm --filter elysia-server push    # Runs database migrations for the elysia-server application.
 
-    pnpm --filter @packages/ui check — Runs the check script (Biome) for the @packages/ui library.
+---
 
-    pnpm --filter elysia-server push — Runs database migrations for the elysia-server application.
-
-🚢 Deployment
+## 🚢 Deployment
 
 Deployment instructions coming soon!
-(Guides will cover deployment strategies for platforms like Vercel, Netlify, and potentially Docker setups.)
-🧹 Linting and Formatting
+Guides will cover deployment strategies for platforms like Vercel, Netlify, and potentially Docker setups.
 
-This project uses Biome for fast and comprehensive linting and formatting.
+---
 
-    Configuration is managed by a root biome.json file, with potential overrides in individual biome.json files within each app or package.
+## 🧹 Linting and Formatting
 
-    Format all code:
+This project uses [Biome](https://biomejs.dev/) for fast and comprehensive linting and formatting.
 
-          
-    pnpm format
+- Configuration is managed by a root `biome.json` file, with potential overrides in individual `biome.json` files within each app or package.
 
-        
+### Format all code
 
-    IGNORE_WHEN_COPYING_START
+```bash
+pnpm format
+```
 
-Use code with caution. Bash
-IGNORE_WHEN_COPYING_END
+### Lint all code
 
-Lint all code:
-
-      
+```bash
 pnpm lint
+```
 
-    
+This uses `turbo lint` which in turn executes the `lint` or `check` script (usually `biome check` or `biome lint`) defined in each package's package.json.
 
-IGNORE_WHEN_COPYING_START
-Use code with caution. Bash
-IGNORE_WHEN_COPYING_END
+### Run comprehensive checks (lint & format)
 
-This uses turbo lint which in turn executes the lint or check script (usually biome check or biome lint) defined in each package's package.json.
+The README previously mentioned `pnpm check`. If you wish to have a global check command, consider adding a script to your root `package.json`:
 
-Run comprehensive checks (lint & format):
-The README previously mentioned pnpm check. If you wish to have a global check command, consider adding a script to your root package.json:
-
-      
+```json
 // package.json (root)
 {
   // ...
@@ -183,39 +176,37 @@ The README previously mentioned pnpm check. If you wish to have a global check c
     "check": "biome check ."
   }
 }
+```
 
-    
+You can then run:
 
-IGNORE_WHEN_COPYING_START
+```bash
+pnpm check
+```
 
-    Use code with caution. Json
-    IGNORE_WHEN_COPYING_END
+`biome check .` will verify both linting and formatting rules. For auto-applying fixes, you can use `biome check . --apply` (or `--write` in newer Biome versions).
 
-    Then you can run pnpm check. biome check . will verify both linting and formatting rules. For auto-applying fixes, you can use biome check . --apply (or --write in newer Biome versions).
+---
 
-TODO
+## TODO
 
 Here are the upcoming tasks:
 
-    Further explore and integrate Bun's capabilities with Turborepo for task running.
+- Further explore and integrate Bun's capabilities with Turborepo for task running.
+- Migrate UI library from Shadcn UI to Tamagui UI for better cross-platform support.
+- Add a dedicated Expo package for native/mobile development.
+- Update to Biome 2.0 when stable and beneficial.
+- Add comprehensive deployment guides. **(Deployment guide coming soon!)**
 
-    Migrate UI library from Shadcn UI to Tamagui UI for better cross-platform support.
+---
 
-    Add a dedicated Expo package for native/mobile development.
-
-    Update to Biome 2.0 when stable and beneficial.
-
-    Add comprehensive deployment guides. **(Deployment guide coming soon!)**
-
-🤝 Contributing
+## 🤝 Contributing
 
 Contributions are highly welcome! Whether it's a feature request, bug report, or a pull request, please feel free to contribute.
 
-    For significant changes or new features, please open an issue first to discuss your ideas.
-
-    Ensure your code adheres to the linting and formatting standards by running pnpm lint and pnpm format (or pnpm check if you've set it up) before submitting a pull request.
-
-    Write clear and concise commit messages.
+- For significant changes or new features, please open an issue first to discuss your ideas.
+- Ensure your code adheres to the linting and formatting standards by running `pnpm lint` and `pnpm format` (or `pnpm check` if you've set it up) before submitting a pull request.
+- Write clear and concise commit messages.
 
 <p align="center">
 <sub>Made with ❤️ by <a href="https://github.com/<YOUR_GITHUB_USERNAME>">@<YOUR_GITHUB_USERNAME></a></sub>
