@@ -1,5 +1,4 @@
-
-<h1 align="center">✨ EAR stack monorepo ✨</h1>
+<h1 align="center">✨ EAR Stack Monorepo ✨</h1>
 
 <p align="center">
   <b>Modern fullstack monorepo powered by <a href="https://elysiajs.com/">Elysia</a>, <a href="https://bun.sh/">Bun</a>, <a href="https://astro.build/">Astro</a>, <a href="https://react.dev/">React</a>, <a href="https://turbo.build/repo">Turborepo</a>, and <a href="https://pnpm.io/">pnpm</a>.</b>
@@ -11,26 +10,27 @@
 
 This monorepo is organized into:
 
--   `apps/`: Core applications.
--   `packages/`: Shared code, libraries, and UI components.
+- `apps/`: Core applications
+- `packages/`: Shared code, libraries, and UI components
+- `tooling/`: Shared tooling configurations (e.g., TypeScript)
 
 ### Applications
 
-| Directory           | Technology                 | Description                                                           |
-|---------------------|---------------------------|-----------------------------------------------------------------------|
-| `apps/blog`         | Astro                     | Static, content-focused blog application                              |
-| `apps/dashboard`    | TanStack React Start (SPA)| Dynamic React dashboard for managing project data and user interactions|
-| `apps/docs`         | Astro Starlight           | Comprehensive documentation site                                      |
-| `apps/landing-page` | Astro                     | Beautiful landing page for the project                                |
-| `apps/server`       | Elysia (Bun) + Drizzle    | REST backend server and database API                                  |
+| Directory              | Technology                    | Description                                                           |
+|-----------------------|-------------------------------|-----------------------------------------------------------------------|
+| `apps/blog`           | Astro                         | Static, content-focused blog application                              |
+| `apps/dashboard`      | TanStack React Start (SPA)    | Dynamic React dashboard for managing project data and user interactions|
+| `apps/docs`           | Astro Starlight               | Comprehensive documentation site                                      |
+| `apps/landing-page`   | Astro                         | Beautiful landing page for the project                                |
+| `apps/server`         | Elysia (Bun) + Drizzle        | REST backend server and database API with authentication              |
 
 ### Packages
 
-| Directory                      | Technology                | Description                                         |
-|---------------------------------|--------------------------|-----------------------------------------------------|
-| `packages/eden`                | Elysia + Eden            | Type-safe client library for the Elysia backend     |
-| `packages/typescript-config`    | TypeScript               | Shared TypeScript configurations                    |
-| `packages/ui`                  | React + Tailwind/Shadcn   | Shared UI component library                         |
+| Directory                  | Technology                  | Description                                         |
+|----------------------------|-----------------------------|-----------------------------------------------------|
+| `packages/eden`            | Elysia + Eden               | Type-safe client library for the Elysia backend     |
+| `packages/ui`              | React + Tailwind/Shadcn     | Shared UI component library                         |
+| `tooling/typescript`       | TypeScript                  | Shared TypeScript configurations (`tsconfig`s)       |
 
 ---
 
@@ -38,12 +38,14 @@ This monorepo is organized into:
 
 - **Monorepo:** Turborepo
 - **Package Manager:** pnpm
-- **Backend:** Elysia (Bun)
+- **Runtime (Backend/Tasks):** Bun
+- **Backend Framework:** Elysia
+- **Authentication (Backend):** Better Auth
 - **Database:** PostgreSQL (Neon)
 - **ORM:** Drizzle ORM
-- **API Client:** Eden
-- **Frontend:** Astro, React
-- **React SPA:** TanStack React Start, TanStack Router, TanStack Query
+- **API Client:** Eden (for Elysia)
+- **Frontend Frameworks:** Astro, React
+- **React SPA Stack:** TanStack React Start (Vite), TanStack Router, TanStack Query, TanStack Form
 - **Styling:** Tailwind CSS, Shadcn UI
 - **Linting & Formatting:** Biome
 
@@ -53,106 +55,151 @@ This monorepo is organized into:
 
 ### Prerequisites
 
-- **Node.js**: `^18.0.0` or `^20.0.0`
-- **pnpm**: `^8.0.0` (enable with `corepack enable`)
-- **Bun**: `^1.0.0` (for server and Bun tasks)
+- **Node.js**: `^20.0.0`
+- **pnpm**: `^10.0.0` (enable with `corepack enable`)
+- **Bun**: `^1.0.0` (for `apps/server` and Bun-specific tasks)
 
 ### Steps
 
 1. **Clone the repository**
-    ```bash
-    git clone https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>.git
-    cd <YOUR_REPO_NAME>
-    ```
+
+   ```bash
+   git clone https://github.com/Yorizel/ear-monorepo.git
+   cd ear-monorepo
+   ```
 
 2. **Install dependencies**
-    ```bash
-    pnpm install
-    ```
-    Installs all dependencies using pnpm workspaces.
+
+   ```bash
+   pnpm install
+   ```
+   Installs all dependencies using pnpm workspaces.
 
 3. **Setup Environment Variables**
-    ```bash
-    cp apps/server/.env.example apps/server/.env
-    # Edit apps/server/.env with your DATABASE_URL and auth secrets
-    ```
+
+   Copy the example environment file for the server:
+   ```bash
+   cp apps/server/.env.example apps/server/.env
+   ```
+   Edit `apps/server/.env` with your `DATABASE_URL` (e.g., from Neon) and `BETTER_AUTH_SECRET`.
 
 4. **Run Database Migrations**
-    ```bash
-    cd apps/server
-    pnpm run push
-    cd ../..
-    ```
+
+   Navigate to the server directory and run the Drizzle Kit push command:
+   ```bash
+   cd apps/server
+   pnpm run push # Executes 'bunx drizzle-kit push'
+   cd ../..
+   ```
 
 5. **Start Development Servers**
-    ```bash
-    pnpm dev
-    ```
-    This spins up all dev servers using Turborepo. Access apps at:
 
-    - Landing Page: [localhost:4321](http://localhost:4321)
-    - Blog: [localhost:4322](http://localhost:4322)
-    - Docs: [localhost:4323](http://localhost:4323)
-    - Dashboard: [localhost:3000](http://localhost:3000)
-    - Server: [localhost:9876](http://localhost:9876)
+   ```bash
+   pnpm dev
+   ```
+   This command uses Turborepo to spin up all development servers concurrently. Applications are available at:
+
+   - Landing Page (Astro): [http://localhost:4321](http://localhost:4321)
+   - Blog (Astro): [http://localhost:4322](http://localhost:4322)
+   - Docs (Astro Starlight): [http://localhost:4323](http://localhost:4323)
+   - Dashboard (TanStack React Start): [http://localhost:3000](http://localhost:3000)
+   - Server (Elysia): [http://localhost:9876](http://localhost:9876)
 
 ---
 
 ## 🛠️ Available Commands
 
-- `pnpm build` &mdash; Build all apps and packages
-- `pnpm dev` &mdash; Start all dev servers
-- `pnpm lint` &mdash; Lint all code with Biome
-- `pnpm format` &mdash; Format code with Biome
+Run these commands from the root of the monorepo:
 
-To run scripts for a specific app/package:
+- `pnpm build` — Build all applications and packages
+- `pnpm dev` — Start all development servers concurrently
+- `pnpm lint` — Lint all code across apps and packages
+- `pnpm format` — Format all code in the monorepo
+
+To run scripts for a specific application or package, use the `pnpm --filter` flag:
+
 ```bash
 pnpm --filter <app-or-package-name> <command>
 ```
 
-Examples:
-- `pnpm --filter blog dev` &mdash; Start only the blog dev server
-- `pnpm --filter @packages/ui build` &mdash; Build only the UI package
+**Examples:**
+
+```bash
+pnpm --filter blog dev                 # Start the blog application only
+pnpm --filter @packages/ui check       # Run the check script (Biome) for @packages/ui
+pnpm --filter elysia-server push       # Run database migrations for elysia-server
+```
 
 ---
 
 ## 🚢 Deployment
 
-_Deployment instructions coming soon!_  
-(Will include guides for Vercel, Netlify, Docker, etc.)
+Deployment instructions coming soon!
+Guides will cover deployment strategies for platforms like Vercel, Netlify, and Docker.
 
 ---
 
 ## 🧹 Linting and Formatting
 
-Uses [Biome](https://biomejs.dev/) for linting/formatting.  
-Config in root `biome.json` (with possible per-app overrides).
+This project uses **Biome** for fast, comprehensive linting and formatting.
 
-- `pnpm format` &mdash; Format all code
-- `pnpm lint` &mdash; Lint all code
-- `pnpm check` &mdash; Run full checks (format & lint)
+- Configuration is managed by a root `biome.json` file, with possible overrides in each app or package.
+
+### Format all code
+
+```bash
+pnpm format
+```
+
+### Lint all code
+
+```bash
+pnpm lint
+```
+
+This uses Turborepo's lint task, which triggers the lint or check script (usually `biome check` or `biome lint`) in each package's `package.json`.
+
+### Run comprehensive checks (lint & format)
+
+If you want a global check command, add this to your root `package.json`:
+
+```json
+// package.json (root)
+{
+  // ...
+  "scripts": {
+    // ...
+    "check": "biome check ."
+  }
+}
+```
+
+Then run:
+
+```bash
+pnpm check
+```
+
+`biome check .` will verify both linting and formatting rules. To auto-apply fixes, use `biome check . --apply` (or `--write` in newer Biome versions).
 
 ---
 
 ## TODO
 
-Here are the upcoming tasks:
-
-- [ ] Update to use Bun with Turborepo
-- [ ] Update to Biome 2.0
+- Further explore and integrate Bun's capabilities with Turborepo for task running
+- Update to Biome 2.0 when stable
+- Add comprehensive deployment guides
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome!  
-Please [open an issue](https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>/issues) for feature requests or bugs, or submit a PR.
+Contributions are highly welcome! Whether it's a feature request, bug report, or pull request, please contribute!
 
-- For major changes, open an issue to discuss your idea first.
-- Make sure your code passes linting and formatting (`pnpm check`).
-
----
+- For significant changes or new features, please open an issue first to discuss your idea.
+- Ensure code adheres to linting and formatting standards by running `pnpm lint` and `pnpm format` (or `pnpm check` if set up) before submitting a pull request.
+- Write clear, concise commit messages.
 
 <p align="center">
-  <sub>Made with ❤️ by <a href="https://github.com/<YOUR_GITHUB_USERNAME>">@<YOUR_GITHUB_USERNAME></a></sub>
+  <sub>Made with ❤️ by <a href="https://github.com/Yorizel">@<Yorizel></a></sub>
 </p>
