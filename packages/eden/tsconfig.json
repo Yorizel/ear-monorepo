@@ -1,5 +1,5 @@
 {
-	"extends": "@packages/typescript-config/base.json",
+	"extends": "@tooling/typescript/base.json",
 	"include": [
 		"src",
 		"test",
@@ -7,5 +7,10 @@
 		"eslint.config.js",
 		"postcss.config.mjs"
 	],
-	"exclude": ["node_modules", "dist", "coverage", ".storybook"]
+	"exclude": [
+		"node_modules",
+		"dist",
+		"coverage",
+		".storybook"
+	]
 }

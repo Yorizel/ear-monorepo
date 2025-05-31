@@ -22,7 +22,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@packages/typescript-config": "workspace:*",
+		"@tooling/typescript": "workspace:*",
 		"typescript": "^5.7.2"
 	}
 }
