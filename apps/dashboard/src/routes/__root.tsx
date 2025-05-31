@@ -1,20 +1,15 @@
 import {
-	HeadContent,
 	Outlet,
+	HeadContent,
 	Scripts,
 	createRootRouteWithContext,
 } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-
-import Header from "../components/Header";
-
-import TanStackQueryLayout from "../integrations/tanstack-query/layout.tsx";
-
+import type { edenAdapter } from "@packages/eden";
 import appCss from "@packages/ui/globals.css?url";
-
 import type { QueryClient } from "@tanstack/react-query";
-
+import { QueryProvider } from "@/integrations/tanstack-query";
 interface MyRouterContext {
+	eden: typeof edenAdapter;
 	queryClient: QueryClient;
 }
 
@@ -42,12 +37,9 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 
 	component: () => (
 		<RootDocument>
-			<Header />
-
-			<Outlet />
-			<TanStackRouterDevtools />
-
-			<TanStackQueryLayout />
+			<QueryProvider>
+				<Outlet />
+			</QueryProvider>
 		</RootDocument>
 	),
 });
