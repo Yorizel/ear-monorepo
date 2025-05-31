@@ -9,7 +9,7 @@
 	},
 	"devDependencies": {
 		"elysia-server": "workspace:*",
-		"@packages/typescript-config": "workspace:*",
+		"@tooling/typescript": "workspace:*",
 		"elysia": "^1.3.3"
 	}
 }

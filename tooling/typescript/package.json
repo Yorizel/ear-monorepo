@@ -1,5 +1,5 @@
 {
-	"name": "@packages/typescript-config",
+	"name": "@tooling/typescript",
 	"version": "0.0.0",
 	"private": true,
 	"license": "PROPRIETARY",
