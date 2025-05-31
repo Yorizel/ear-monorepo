@@ -4,7 +4,8 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "bun run --watch src/index.ts",
-		"build": "bun build src/index.ts --outdir ./dist",
+		"start": "./server",
+		"build": "bun build --compile --minify-whitespace --minify-syntax --target bun --outfile server ./src/index.ts",
 		"check": "biome check",
 		"format": "biome format",
 		"generate": "bunx drizzle-kit generate",
