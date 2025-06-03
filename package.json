@@ -6,7 +6,7 @@
 		"build": "turbo build",
 		"dev": "turbo dev",
 		"lint": "turbo lint",
-		"format": "biome check --write .",
+		"format": "biome format --write .",
 		"prepare": "husky"
 	},
 	"devDependencies": {
