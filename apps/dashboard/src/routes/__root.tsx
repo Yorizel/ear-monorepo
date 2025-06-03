@@ -1,13 +1,13 @@
-import {
-	Outlet,
-	HeadContent,
-	Scripts,
-	createRootRouteWithContext,
-} from "@tanstack/react-router";
+import { QueryProvider } from "@/integrations/tanstack-query";
 import type { edenAdapter } from "@packages/eden";
 import appCss from "@packages/ui/globals.css?url";
 import type { QueryClient } from "@tanstack/react-query";
-import { QueryProvider } from "@/integrations/tanstack-query";
+import {
+	HeadContent,
+	Outlet,
+	Scripts,
+	createRootRouteWithContext,
+} from "@tanstack/react-router";
 interface MyRouterContext {
 	eden: typeof edenAdapter;
 	queryClient: QueryClient;

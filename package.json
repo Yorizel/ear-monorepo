@@ -6,8 +6,8 @@
 		"build": "turbo build",
 		"dev": "turbo dev",
 		"lint": "turbo lint",
-		"format": "biome check --write .",
-		"pre-commit": "format"
+		"format": "biome format --write .",
+		"prepare": "husky"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
