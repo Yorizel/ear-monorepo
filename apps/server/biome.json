@@ -1,18 +1,14 @@
 {
 	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-	"organizeImports": {
-		"enabled": true
-	},
+	"extends": ["../../biome.json"],
 	"linter": {
-		"enabled": true,
 		"rules": {
 			"style": {
 				"useTemplate": "off"
 			},
 			"performance": {
 				"noDelete": "off"
-			},
-			"recommended": true
+			}
 		}
 	}
 }
