@@ -1,6 +1,6 @@
 import { edenAdapter } from "@packages/eden";
 export const getContext = () => {
-  return {
-    eden: edenAdapter,
-  };
+	return {
+		eden: edenAdapter,
+	};
 };
