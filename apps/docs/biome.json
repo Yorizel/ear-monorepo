@@ -1,10 +1,9 @@
 {
 	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"extends": ["../../biome.json"],
 	"overrides": [
 		{
-			"include": [
-				"*.astro"
-			],
+			"include": ["*.astro"],
 			"linter": {
 				"rules": {
 					"style": {
@@ -14,37 +13,5 @@
 				}
 			}
 		}
-	],
-	"json": {
-		"formatter": {
-			"trailingCommas": "none"
-		}
-	},
-	"vcs": {
-		"enabled": false,
-		"clientKind": "git",
-		"useIgnoreFile": false
-	},
-	"files": {
-		"ignoreUnknown": false,
-		"ignore": []
-	},
-	"formatter": {
-		"enabled": true,
-		"indentStyle": "tab"
-	},
-	"organizeImports": {
-		"enabled": true
-	},
-	"linter": {
-		"enabled": true,
-		"rules": {
-			"recommended": true
-		}
-	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "double"
-		}
-	}
+	]
 }
