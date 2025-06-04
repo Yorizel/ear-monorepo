@@ -2,11 +2,12 @@ import cors from "@elysiajs/cors";
 import swagger from "@elysiajs/swagger";
 import { Elysia } from "elysia";
 import { authService } from "./lib/auth";
+import { env } from "./config/env";
 const app = new Elysia()
   .use(authService)
   .use(
     cors({
-      origin: "http://localhost:3000",
+      origin: env.BETTER_AUTH_TRUSTED_ORIGINS.split(","),
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
       credentials: true,
       allowedHeaders: ["Content-Type", "Authorization"],
