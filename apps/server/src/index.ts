@@ -13,7 +13,7 @@ const app = new Elysia()
     }),
   )
   .use(swagger())
-  .post("/works", () => {
+  .get("/works", () => {
     return { message: "Eden WORKS!" };
   })
   .listen(9876);

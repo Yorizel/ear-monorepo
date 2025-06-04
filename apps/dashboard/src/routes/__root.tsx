@@ -1,5 +1,5 @@
 import { QueryProvider } from "@/integrations/tanstack-query";
-import type { edenAdapter } from "@packages/eden";
+import type { EdenClientType } from "@packages/eden";
 import appCss from "@packages/ui/globals.css?url";
 import type { QueryClient } from "@tanstack/react-query";
 import {
@@ -9,7 +9,7 @@ import {
   createRootRouteWithContext,
 } from "@tanstack/react-router";
 interface MyRouterContext {
-  eden: typeof edenAdapter;
+  eden: EdenClientType;
   queryClient: QueryClient;
 }
 

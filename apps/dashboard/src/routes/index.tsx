@@ -1,25 +1,20 @@
-import { useQuery } from "@tanstack/react-query";
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { createFileRoute, useRouteContext } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   component: App,
-  loader: async ({ context }) => {
-    const queryClient = context.queryClient;
-    console.log(queryClient);
-    return queryClient.prefetchQuery({
-      queryKey: ["works"],
-      queryFn: context.eden.works.post,
-    });
-  },
 });
 
 function App() {
   const { eden } = useRouteContext({
     from: "/",
   });
-  const { data } = useQuery({
+  const { data } = useSuspenseQuery({
     queryKey: ["works"],
-    queryFn: eden.works.post,
+    queryFn: async () => {
+      const data = await eden.works.get();
+      return data;
+    },
   });
   return (
     <div className="text-center">
