@@ -1,72 +1,72 @@
 ---
 import { Image } from "astro:assets";
 const slugs = [
-	"elysia",
-	"astro",
-	"react",
-	"drizzle",
-	"turborepo",
-	"pnpm",
-	"tanstack",
-	"tailwindcss",
+  "elysia",
+  "astro",
+  "react",
+  "drizzle",
+  "turborepo",
+  "pnpm",
+  "tanstack",
+  "tailwindcss",
 ];
 const images = slugs.map(
-	(slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
+  (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
 );
 
 // Update specific image URLs
 images[0] = "https://elysiajs.com/assets/elysia.svg"; // Elysia
 images[6] =
-	"https://cdn.brandfetch.io/idWcj3JjN7/w/100/h/100/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B"; // TanStack
+  "https://cdn.brandfetch.io/idWcj3JjN7/w/100/h/100/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B"; // TanStack
 
 const technologies = [
-	{
-		imageURL: images[0],
-		name: "Elysia (Bun)",
-		description:
-			"Fast, type-safe backend with automatic OpenAPI generation and lightning-fast performance",
-	},
-	{
-		imageURL: images[1],
-		name: "Astro",
-		description:
-			"Static site generation with component islands architecture for optimal performance",
-	},
-	{
-		imageURL: images[6],
-		name: "TanStack Start",
-		description:
-			"Full-stack React and Solid framework powered by TanStack Router",
-	},
-	{
-		imageURL: images[3],
-		name: "Drizzle ORM",
-		description:
-			"Type-safe database operations with PostgreSQL and automatic schema generation",
-	},
-	{
-		imageURL: images[4],
-		name: "Turborepo",
-		description:
-			"High-performance build system for monorepos with intelligent caching",
-	},
-	{
-		imageURL: images[5],
-		name: "pnpm",
-		description:
-			"Fast, disk space efficient package manager with workspace support",
-	},
-	{
-		imageURL: "https://cdn.simpleicons.org/biome/biome",
-		name: "BiomeJS",
-		description:
-			"Fast, modern JavaScript toolkit for code linting, formatting, and analysis",
-	},
-	{
-		imageURL: images[7],
-		name: "Tailwind CSS",
-		description: "Utility-first CSS framework with Shadcn UI components",
-	},
+  {
+    imageURL: images[0],
+    name: "Elysia (Bun)",
+    description:
+      "Fast, type-safe backend with automatic OpenAPI generation and lightning-fast performance",
+  },
+  {
+    imageURL: images[1],
+    name: "Astro",
+    description:
+      "Static site generation with component islands architecture for optimal performance",
+  },
+  {
+    imageURL: images[6],
+    name: "TanStack Start",
+    description:
+      "Full-stack React and Solid framework powered by TanStack Router",
+  },
+  {
+    imageURL: images[3],
+    name: "Drizzle ORM",
+    description:
+      "Type-safe database operations with PostgreSQL and automatic schema generation",
+  },
+  {
+    imageURL: images[4],
+    name: "Turborepo",
+    description:
+      "High-performance build system for monorepos with intelligent caching",
+  },
+  {
+    imageURL: images[5],
+    name: "pnpm",
+    description:
+      "Fast, disk space efficient package manager with workspace support",
+  },
+  {
+    imageURL: "https://cdn.simpleicons.org/biome/biome",
+    name: "BiomeJS",
+    description:
+      "Fast, modern JavaScript toolkit for code linting, formatting, and analysis",
+  },
+  {
+    imageURL: images[7],
+    name: "Tailwind CSS",
+    description: "Utility-first CSS framework with Shadcn UI components",
+  },
 ];
 ---
 

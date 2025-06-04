@@ -9,25 +9,25 @@ import "@packages/ui/globals.css";
 
 // Create a new router instance
 export const createRouter = () => {
-	const router = routerWithQueryClient(
-		createTanstackRouter({
-			routeTree,
-			context: {
-				...Eden.getContext(),
-				...TanstackQuery.getContext(),
-			},
-			scrollRestoration: true,
-			defaultPreloadStaleTime: 0,
-		}),
-		TanstackQuery.getContext().queryClient,
-	);
+  const router = routerWithQueryClient(
+    createTanstackRouter({
+      routeTree,
+      context: {
+        ...Eden.getContext(),
+        ...TanstackQuery.getContext(),
+      },
+      scrollRestoration: true,
+      defaultPreloadStaleTime: 0,
+    }),
+    TanstackQuery.getContext().queryClient,
+  );
 
-	return router;
+  return router;
 };
 
 // Register the router instance for type safety
 declare module "@tanstack/react-router" {
-	interface Register {
-		router: ReturnType<typeof createRouter>;
-	}
+  interface Register {
+    router: ReturnType<typeof createRouter>;
+  }
 }

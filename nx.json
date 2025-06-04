@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["{projectRoot}/**/*", "{projectRoot}/.env*"],
+      "outputs": ["{projectRoot}/.next/**", "!{projectRoot}/.next/cache/**"],
+      "cache": true
+    },
+    "lint": {
+      "dependsOn": ["^lint"],
+      "cache": true
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"],
+      "cache": true
+    },
+    "dev": {
+      "cache": false
+    }
+  },
+  "defaultBase": "master"
+}
