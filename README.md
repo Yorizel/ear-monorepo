@@ -4,6 +4,22 @@
   <b>Modern fullstack monorepo powered by <a href="https://elysiajs.com/">Elysia</a>, <a href="https://bun.sh/">Bun</a>, <a href="https://astro.build/">Astro</a>, <a href="https://react.dev/">React</a>, <a href="https://turbo.build/repo">Turborepo</a>, and <a href="https://pnpm.io/">pnpm</a>.</b>
 </p>
 
+<p align="center">
+  <a href="https://ear-monorepo-landing-page.vercel.app/" style="text-decoration:none;">
+    <img alt="Landing Page" src="https://img.shields.io/badge/Landing%20Page-Visit-blue?style=for-the-badge">
+  </a>
+  <a href="https://ear-monorepo-blog.vercel.app/" style="text-decoration:none;">
+    <img alt="Blog" src="https://img.shields.io/badge/Blog-Visit-green?style=for-the-badge">
+  </a>
+  <a href="https://ear-monorepo-docs.vercel.app/" style="text-decoration:none;">
+    <img alt="Docs" src="https://img.shields.io/badge/Docs-Visit-orange?style=for-the-badge">
+  </a>
+  <a href="https://ear-monorepo-dashboard.vercel.app/" style="text-decoration:none;">
+    <img alt="Dashboard" src="https://img.shields.io/badge/Dashboard-Visit-red?style=for-the-badge">
+  </a>
+</p>
+
+
 ---
 
 ## 📦 Structure
