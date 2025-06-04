@@ -1,25 +1,25 @@
 {
-	"name": "elysiajs-monorepo",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"build": "nx build",
-		"dev": "nx run-many -t dev --parallel=5",
-		"lint": "nx lint",
-		"format": "nx format:write",
-		"prepare": "husky install"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"@commitlint/cli": "^19.8.1",
-		"@commitlint/config-conventional": "^19.8.1",
-		"@tooling/typescript": "workspace:*",
-		"husky": "^9.1.7",
-		"nx": "21.1.2",
-		"typescript": "5.7.3"
-	},
-	"packageManager": "pnpm@10.4.1",
-	"engines": {
-		"node": ">=20"
-	}
+  "name": "elysiajs-monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "nx build",
+    "dev": "nx run-many -t dev --parallel=5",
+    "lint": "nx lint",
+    "format": "nx format:write",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@tooling/typescript": "workspace:*",
+    "husky": "^9.1.7",
+    "nx": "21.1.2",
+    "typescript": "5.7.3"
+  },
+  "packageManager": "pnpm@10.4.1",
+  "engines": {
+    "node": ">=20"
+  }
 }
