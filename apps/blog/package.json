@@ -10,20 +10,21 @@
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^4.3.0",
+		"@astrojs/react": "^4.3.0",
 		"@astrojs/rss": "^4.0.11",
 		"@astrojs/sitemap": "^3.4.0",
-		"@astrojs/react": "^4.3.0",
+		"@astrojs/vercel": "^8.1.5",
 		"@packages/ui": "workspace:*",
 		"@tailwindcss/vite": "^4.1.8",
 		"@types/react": "^19.1.6",
 		"@types/react-dom": "^19.1.5",
+		"astro": "^5.8.0",
 		"react": "^19.1.0",
-		"react-dom": "^19.1.0",
-		"astro": "^5.8.0"
+		"react-dom": "^19.1.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"typescript": "^5.7.2",
-		"@tooling/typescript": "workspace:*"
+		"@tooling/typescript": "workspace:*",
+		"typescript": "^5.7.2"
 	}
 }
