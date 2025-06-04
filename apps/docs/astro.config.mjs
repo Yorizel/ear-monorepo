@@ -4,11 +4,14 @@ import { defineConfig, passthroughImageService } from "astro/config";
 
 import tailwindcss from "@tailwindcss/vite";
 
+import vercel from "@astrojs/vercel";
+
 // https://astro.build/config
 export default defineConfig({
 	image: {
 		service: passthroughImageService(),
 	},
+
 	integrations: [
 		starlight({
 			customCss: ["./src/styles/global.css"],
@@ -39,4 +42,6 @@ export default defineConfig({
 	vite: {
 		plugins: [tailwindcss()],
 	},
+
+	adapter: vercel(),
 });
