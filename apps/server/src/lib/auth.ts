@@ -7,7 +7,7 @@ import Elysia from "elysia";
 import { db } from "./database";
 export const auth = betterAuth({
   secret: env.BETTER_AUTH_SECRET,
-  trustedOrigins: ["http://localhost:3000"],
+  trustedOrigins: env.BETTER_AUTH_TRUSTED_ORIGINS.split(","),
   emailAndPassword: {
     enabled: true,
   },
