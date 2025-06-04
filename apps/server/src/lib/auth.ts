@@ -6,16 +6,16 @@ import { openAPI } from "better-auth/plugins";
 import Elysia from "elysia";
 import { db } from "./database";
 export const auth = betterAuth({
-	secret: env.BETTER_AUTH_SECRET,
-	trustedOrigins: ["http://localhost:3000"],
-	emailAndPassword: {
-		enabled: true,
-	},
-	database: drizzleAdapter(db, {
-		provider: "pg",
-		schema: authSchema,
-	}),
-	plugins: [openAPI()],
+  secret: env.BETTER_AUTH_SECRET,
+  trustedOrigins: ["http://localhost:3000"],
+  emailAndPassword: {
+    enabled: true,
+  },
+  database: drizzleAdapter(db, {
+    provider: "pg",
+    schema: authSchema,
+  }),
+  plugins: [openAPI()],
 });
 
 export const authService = new Elysia().mount(auth.handler);

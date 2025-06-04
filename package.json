@@ -6,7 +6,7 @@
     "build": "nx build",
     "dev": "nx run-many -t dev --parallel=5",
     "lint": "nx lint",
-    "format": "nx format:write",
+    "format": "biome format --write .",
     "prepare": "husky install"
   },
   "devDependencies": {
