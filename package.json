@@ -5,9 +5,8 @@
   "scripts": {
     "build": "nx ryn-many -t build --parallel=5",
     "dev": "nx run-many -t dev --parallel=5",
-    "lint": "nx lint",
-    "format": "biome format --write .",
-    "prepare": "husky install"
+    "lint": "nx run-many -t lint --parallel=5",
+    "format": "biome format --write ."
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -15,10 +14,17 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@tooling/typescript": "workspace:*",
     "husky": "^9.1.7",
-    "nx": "21.1.2",
-    "typescript": "5.7.3"
+    "nx": "21.1.2"
   },
-  "packageManager": "pnpm@10.4.1",
+  "catalog": {
+    "typescript": "5.8.3"
+  },
+  "workspaces": {
+    "packages": ["tooling/*", "packages/*", "apps/*"],
+    "catalog": {
+      "typescript": "5.8.3"
+    }
+  },
   "engines": {
     "node": ">=20"
   }

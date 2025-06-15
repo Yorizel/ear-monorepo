@@ -4,6 +4,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
+      "@api": ["../../apps/server/src/index"],
+      "@api/*": ["../../apps/server/src/*"],
       "@packages/ui/*": ["../../packages/ui/src/*"]
     },
     "target": "ES2022",

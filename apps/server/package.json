@@ -24,6 +24,7 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "typescript": "catalog:",
     "@biomejs/biome": "1.9.4",
     "@tooling/typescript": "workspace:*",
     "bun-types": "latest",

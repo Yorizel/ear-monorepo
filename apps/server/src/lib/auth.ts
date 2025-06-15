@@ -1,5 +1,5 @@
-import { env } from "@/config/env";
-import * as authSchema from "@/schemas/auth-schema";
+import { env } from "@api/config/env";
+import * as authSchema from "@api/schemas/auth-schema";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { openAPI } from "better-auth/plugins";
