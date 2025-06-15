@@ -1,3 +1,4 @@
+import { createQueryKey } from "@packages/eden";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { createFileRoute, useRouteContext } from "@tanstack/react-router";
 
@@ -10,7 +11,7 @@ function App() {
     from: "/",
   });
   const { data } = useSuspenseQuery({
-    queryKey: ["works"],
+    queryKey: createQueryKey("eden.works.get"),
     queryFn: async () => {
       const data = await eden.works.get();
       return data;
