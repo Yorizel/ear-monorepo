@@ -20,11 +20,7 @@
     "typescript": "5.8.3"
   },
   "workspaces": {
-    "packages": [
-      "tooling/*",
-      "packages/*",
-      "apps/*"
-    ],
+    "packages": ["tooling/*", "packages/*", "apps/*"],
     "catalog": {
       "typescript": "5.8.3"
     }
