@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "check": "biome check"
+    "check": "biome check --write ./src"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.0.2",
