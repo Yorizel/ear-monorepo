@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@tooling/typescript": "workspace:*"
+    "@tooling/typescript": "workspace:*",
+    "typescript": "catalog:"
   }
 }
