@@ -5,7 +5,7 @@
   "scripts": {
     "build": "nx ryn-many -t build --parallel=5",
     "dev": "nx run-many -t dev --parallel=5",
-    "lint": "nx run-many -t lint --parallel=5",
+    "check": "nx run-many -t check --parallel=5",
     "format": "biome format --write ."
   },
   "devDependencies": {
