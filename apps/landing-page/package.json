@@ -17,11 +17,11 @@
   },
   "name": "landing-page",
   "scripts": {
-    "astro": "astro",
-    "build": "astro build",
-    "check": "biome check --write .",
-    "dev": "astro dev",
-    "preview": "astro preview"
+    "astro": "bunx --bun astro",
+    "build": "bunx --bun astro build",
+    "check": "bunx --bun biome check --write .",
+    "dev": "bunx --bun astro dev",
+    "preview": "bunx --bun astro preview"
   },
   "type": "module",
   "version": "0.0.1"

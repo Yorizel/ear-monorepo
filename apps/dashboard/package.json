@@ -9,7 +9,7 @@
     "@tanstack/react-router": "^1.114.3",
     "@tanstack/react-router-devtools": "^1.114.3",
     "@tanstack/react-router-with-query": "^1.114.3",
-    "@tanstack/react-start": "^1.114.3",
+    "@tanstack/react-start": "^1.121.29",
     "@tanstack/router-plugin": "^1.114.3",
     "react": "catalog:react",
     "react-dom": "catalog:react",
@@ -34,14 +34,14 @@
   "name": "dashboard",
   "private": true,
   "scripts": {
-    "build": "vinxi build",
-    "check": "biome check",
-    "dev": "vinxi dev",
-    "format": "biome format",
-    "lint": "biome lint",
-    "serve": "vite preview",
-    "start": "vinxi start",
-    "test": "vitest run"
+    "build": "bunx --bun vite build",
+    "check": "bunx --bun biome check",
+    "dev": "bunx --bun vite",
+    "format": "bunx --bun biome format",
+    "lint": "bunx --bun biome lint",
+    "serve": "bunx --bun vite preview",
+    "start": "bunx --bun vite",
+    "test": "bunx --bun vitest run"
   },
   "type": "module"
 }

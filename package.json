@@ -14,13 +14,13 @@
   "name": "elysiajs-monorepo",
   "private": true,
   "scripts": {
-    "build": "bunx --bun nx run-many -t build --parallel=5",
-    "check": "bunx --bun nx run-many -t check --parallel=5",
-    "dev:all": "bunx --bun nx run-many -t dev --parallel=5",
-    "dev:content-apps": "bunx --bun nx run-many -t dev --parallel=5 -p docs blog landing-page",
-    "dev:dashboard": "bunx --bun nx run-many -t dev --parallel=5 -p server dashboard",
-    "format": "bunx --bun biome format --write .",
-    "typecheck": "bunx --bun nx run-many -t typecheck --parallel=5"
+    "build": "nx run-many -t build --parallel=5",
+    "check": "nx run-many -t check --parallel=5",
+    "dev:all": "nx run-many -t dev --parallel=5",
+    "dev:content-apps": "nx run-many -t dev --parallel=5 -p docs blog landing-page",
+    "dev:dashboard": "nx run-many -t dev --parallel=5 -p server dashboard",
+    "format": "biome format --write .",
+    "typecheck": "nx run-many -t typecheck --parallel=5"
   },
   "version": "0.0.1",
   "workspaces": {
@@ -28,7 +28,7 @@
       "astro": {
         "@astrojs/react": "^4.3.0",
         "@lucide/astro": "^0.511.0",
-        "astro": "^5.8.0"
+        "astro": "5.10.0"
       },
       "development": {
         "typescript": "5.8.3"

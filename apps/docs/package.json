@@ -15,12 +15,12 @@
   },
   "name": "docs",
   "scripts": {
-    "astro": "astro",
-    "build": "astro build",
-    "check": "biome check --write ./src",
-    "dev": "astro dev",
-    "preview": "astro preview",
-    "start": "astro dev"
+    "astro": "bunx --bun astro",
+    "build": "bunx --bun astro build",
+    "check": "bunx --bun biome check --write ./src",
+    "dev": "bunx --bun astro dev",
+    "preview": "bunx --bun astro preview",
+    "start": "bunx --bun astro dev"
   },
   "type": "module",
   "version": "0.0.1"
