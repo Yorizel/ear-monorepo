@@ -2,7 +2,6 @@
   "dependencies": {
     "@astrojs/starlight": "^0.34.3",
     "@astrojs/starlight-tailwind": "^4.0.1",
-    "@astrojs/vercel": "^8.1.5",
     "@packages/ui": "workspace:*",
     "@tailwindcss/vite": "^4.1.8",
     "astro": "catalog:astro",

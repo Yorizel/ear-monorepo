@@ -19,7 +19,7 @@
     "dev:all": "nx run-many -t dev --parallel=5",
     "dev:content-apps": "nx run-many -t dev --parallel=5 -p docs blog landing-page",
     "dev:dashboard": "nx run-many -t dev --parallel=5 -p server dashboard native",
-    "format": "biome format --write .",
+    "format": "biome check --write .",
     "typecheck": "nx run-many -t typecheck --parallel=5"
   },
   "version": "0.0.1",
