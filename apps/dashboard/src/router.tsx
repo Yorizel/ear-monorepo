@@ -11,13 +11,13 @@ import "@packages/ui/globals.css";
 export const createRouter = () => {
   const router = routerWithQueryClient(
     createTanstackRouter({
-      routeTree,
       context: {
         ...Eden.getContext(),
         ...TanstackQuery.getContext(),
       },
-      scrollRestoration: true,
       defaultPreloadStaleTime: 0,
+      routeTree,
+      scrollRestoration: true,
     }),
     TanstackQuery.getContext().queryClient,
   );

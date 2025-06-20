@@ -6,12 +6,12 @@ const blog = defineCollection({
   loader: glob({ base: "./src/content/blog", pattern: "**/*.{md,mdx}" }),
   // Type-check frontmatter using a schema
   schema: z.object({
-    title: z.string(),
     description: z.string(),
+    heroImage: z.string().optional(),
     // Transform string to Date object
     pubDate: z.coerce.date(),
+    title: z.string(),
     updatedDate: z.coerce.date().optional(),
-    heroImage: z.string().optional(),
   }),
 });
 

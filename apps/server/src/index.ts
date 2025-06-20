@@ -2,15 +2,16 @@ import cors from "@elysiajs/cors";
 import swagger from "@elysiajs/swagger";
 import { Elysia } from "elysia";
 import { env } from "./config/env";
-import { authService } from "./lib/auth";
+import { authService } from "./integrations/auth";
+
 const app = new Elysia()
   .use(authService)
   .use(
     cors({
-      origin: env.BETTER_AUTH_TRUSTED_ORIGINS.split(","),
-      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-      credentials: true,
       allowedHeaders: ["Content-Type", "Authorization"],
+      credentials: true,
+      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      origin: env.BETTER_AUTH_TRUSTED_ORIGINS.split(","),
     }),
   )
   .use(swagger())

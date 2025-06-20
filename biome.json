@@ -1,39 +1,55 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "formatter": {
-    "enabled": true,
-    "formatWithErrors": false,
-    "attributePosition": "auto",
-    "indentWidth": 2,
-    "lineWidth": 80,
-    "lineEnding": "lf",
-    "indentStyle": "space"
-  },
-  "organizeImports": {
-    "enabled": true
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true
-    }
-  },
-  "javascript": {
-    "formatter": {
-      "quoteStyle": "double"
-    }
-  },
-  "json": {
-    "formatter": {
-      "trailingCommas": "none"
-    }
-  },
-  "vcs": {
-    "enabled": false,
-    "clientKind": "git",
-    "useIgnoreFile": false
-  },
-  "files": {
-    "ignoreUnknown": true
-  }
+	"$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
+	"formatter": {
+		"enabled": true,
+		"formatWithErrors": false,
+		"attributePosition": "auto",
+		"indentWidth": 2,
+		"lineWidth": 80,
+		"lineEnding": "lf",
+		"indentStyle": "space"
+	},
+	"assist": {
+		"actions": {
+			"source": {
+				"useSortedAttributes": "on",
+				"useSortedKeys": "on",
+				"useSortedProperties": "on",
+				"organizeImports": "on"
+			}
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"complexity": {
+				"recommended": true
+			},
+			"performance": {
+				"recommended": true
+			},
+			"security": {
+				"recommended": true
+			}
+		}
+	},
+	"javascript": {
+		"assist": {
+			"enabled": true
+		},
+		"formatter": {
+			"quoteStyle": "double"
+		}
+	},
+	"json": {
+		"assist": {
+			"enabled": true
+		}
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	}
 }

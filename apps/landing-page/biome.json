@@ -1,12 +1,9 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "extends": ["../../biome.json"],
-  "files": {
-    "ignore": ["dist"]
-  },
+  "$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
+  "extends": "//",
   "overrides": [
     {
-      "include": ["*.astro"],
+      "includes": ["**/*.astro"],
       "linter": {
         "rules": {
           "style": {
@@ -16,5 +13,6 @@
         }
       }
     }
-  ]
+  ],
+  "root": false
 }

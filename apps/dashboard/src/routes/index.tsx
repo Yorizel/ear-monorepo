@@ -11,11 +11,11 @@ function App() {
     from: "/",
   });
   const { data } = useSuspenseQuery({
-    queryKey: createQueryKey("eden.works.get"),
     queryFn: async () => {
       const data = await eden.works.get();
       return data;
     },
+    queryKey: createQueryKey("eden.works.get"),
   });
   return (
     <div className="text-center">

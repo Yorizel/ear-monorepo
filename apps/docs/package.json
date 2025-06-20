@@ -1,28 +1,27 @@
 {
-  "name": "docs",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "check": "biome check --write ./src"
-  },
   "dependencies": {
     "@astrojs/starlight": "^0.34.3",
     "@astrojs/starlight-tailwind": "^4.0.1",
     "@astrojs/vercel": "^8.1.5",
     "@packages/ui": "workspace:*",
     "@tailwindcss/vite": "^4.1.8",
-    "astro": "^5.6.1",
+    "astro": "catalog:astro",
     "sharp": "^0.32.6",
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
     "@tooling/typescript": "workspace:*",
-    "typescript": "catalog:"
-  }
+    "typescript": "catalog:development"
+  },
+  "name": "docs",
+  "scripts": {
+    "astro": "bunx --bun astro",
+    "build": "bunx --bun astro build",
+    "check": "bunx --bun biome check --write ./src",
+    "dev": "bunx --bun astro dev",
+    "preview": "bunx --bun astro preview",
+    "start": "bunx --bun astro dev"
+  },
+  "type": "module",
+  "version": "0.0.1"
 }
