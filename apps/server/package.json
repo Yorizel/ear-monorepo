@@ -18,7 +18,7 @@
     "tsx": "^4.19.4",
     "typescript": "catalog:development"
   },
-  "name": "elysia-server",
+  "name": "server",
   "scripts": {
     "build": "bun build --compile --minify-whitespace --minify-syntax --target bun --outfile server ./src/index.ts",
     "check": "biome check --write ./src",
