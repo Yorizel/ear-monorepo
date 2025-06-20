@@ -35,7 +35,7 @@
   "private": true,
   "scripts": {
     "build": "bunx --bun vite build",
-    "check": "bunx --bun biome check",
+    "check": "bunx --bun biome check --write ./src",
     "dev": "bunx --bun vite",
     "format": "bunx --bun biome format",
     "lint": "bunx --bun biome lint",

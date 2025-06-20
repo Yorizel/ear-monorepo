@@ -1,40 +1,20 @@
-import { QueryProvider } from "@/integrations/tanstack-query";
 import type { EdenClientType } from "@packages/eden";
 import appCss from "@packages/ui/globals.css?url";
 import type { QueryClient } from "@tanstack/react-query";
 import {
+  createRootRouteWithContext,
   HeadContent,
   Outlet,
   Scripts,
-  createRootRouteWithContext,
 } from "@tanstack/react-router";
+import { QueryProvider } from "@/integrations/tanstack-query";
+
 interface MyRouterContext {
   eden: EdenClientType;
   queryClient: QueryClient;
 }
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
-  head: () => ({
-    meta: [
-      {
-        charSet: "utf-8",
-      },
-      {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1",
-      },
-      {
-        title: "TanStack Start Starter",
-      },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-  }),
-
   component: () => (
     <RootDocument>
       <QueryProvider>
@@ -42,6 +22,26 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       </QueryProvider>
     </RootDocument>
   ),
+  head: () => ({
+    links: [
+      {
+        href: appCss,
+        rel: "stylesheet",
+      },
+    ],
+    meta: [
+      {
+        charSet: "utf-8",
+      },
+      {
+        content: "width=device-width, initial-scale=1",
+        name: "viewport",
+      },
+      {
+        title: "TanStack Start Starter",
+      },
+    ],
+  }),
 });
 
 function RootDocument({ children }: { children: React.ReactNode }) {

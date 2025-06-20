@@ -13,4 +13,3 @@ function parseEnv(env: NodeJS.ProcessEnv): Static<typeof EnvSchema> {
 }
 
 export const env = parseEnv(process.env);
-
