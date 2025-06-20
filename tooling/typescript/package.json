@@ -1,12 +1,9 @@
 {
-  "name": "@tooling/typescript",
-  "version": "0.0.0",
-  "private": true,
-  "license": "PROPRIETARY",
-  "publishConfig": {
-    "access": "public"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.0"
-  }
+	"name": "@tooling/typescript",
+	"version": "0.0.0",
+	"private": true,
+	"license": "PROPRIETARY",
+	"publishConfig": {
+		"access": "public"
+	}
 }
