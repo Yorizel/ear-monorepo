@@ -36,7 +36,6 @@
 				"astro": "^5.8.0"
 			},
 			"development": {
-				"@biomejs/biome": "2.0.0",
 				"typescript": "5.8.3"
 			}
 		}
