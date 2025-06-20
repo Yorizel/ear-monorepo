@@ -1,9 +1,17 @@
-import z from "zod";
+import { validateInput } from "@api/shared/errors";
+import { type Static, Type } from "@sinclair/typebox";
 
-export const env = z
-  .object({
-    BETTER_AUTH_SECRET: z.string(),
-    BETTER_AUTH_TRUSTED_ORIGINS: z.string(),
-    DATABASE_URL: z.string(),
-  })
-  .parse(process.env);
+const EnvSchema = Type.Object({
+  BETTER_AUTH_SECRET: Type.String(),
+  BETTER_AUTH_TRUSTED_ORIGINS: Type.String(),
+  DATABASE_URL: Type.String(),
+  RESEND_API_KEY: Type.String(),
+});
+
+function parseEnv(env: NodeJS.ProcessEnv): Static<typeof EnvSchema> {
+  validateInput(EnvSchema, env);
+  return env;
+}
+
+export const env = parseEnv(process.env);
+
