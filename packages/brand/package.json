@@ -1,10 +1,10 @@
 {
-	"name": "@packages/brand",
-	"version": "0.0.0",
-	"private": true,
-	"license": "PROPRIETARY",
-	"publishConfig": {
-		"access": "public"
-	},
-	"main": "./index.json"
+  "license": "PROPRIETARY",
+  "main": "./index.json",
+  "name": "@packages/brand",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.0.0"
 }

@@ -1,10 +1,10 @@
 {
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
     "@astrojs/mdx": "^4.3.0",
     "@astrojs/react": "catalog:astro",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.4.0",
-    "@astrojs/vercel": "^8.1.5",
     "@packages/ui": "workspace:*",
     "@tailwindcss/vite": "^4.1.8",
     "astro": "catalog:astro",
@@ -15,15 +15,16 @@
     "@tooling/typescript": "workspace:*",
     "@types/react": "catalog:react",
     "@types/react-dom": "catalog:react",
-    "typescript": "catalog:development"
+    "typescript": "^5.8.3"
   },
   "name": "blog",
   "scripts": {
     "astro": "bunx --bun astro",
     "build": "bunx --bun astro build",
-    "check": "bunx --bun biome check --write ./src",
+    "check": "bunx --bun biome check --write ./src ",
     "dev": "bunx --bun astro dev",
-    "preview": "bunx --bun astro preview"
+    "preview": "bunx --bun astro preview",
+    "typecheck": "bunx --bun astro check"
   },
   "type": "module",
   "version": "0.0.1"

@@ -1,11 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Default",
   "compilerOptions": {
     "baseUrl": "../../",
-    "paths": {
-      "@api": ["apps/server/src/index"]
-    },
     "declaration": true,
     "declarationMap": true,
     "esModuleInterop": true,
@@ -16,9 +12,13 @@
     "moduleDetection": "force",
     "moduleResolution": "NodeNext",
     "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@api": ["apps/server/src/index"]
+    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "ES2022"
-  }
+  },
+  "display": "Default"
 }

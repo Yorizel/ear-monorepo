@@ -2,7 +2,6 @@
   "dependencies": {
     "@astrojs/starlight": "^0.34.3",
     "@astrojs/starlight-tailwind": "^4.0.1",
-    "@astrojs/vercel": "^8.1.5",
     "@packages/ui": "workspace:*",
     "@tailwindcss/vite": "^4.1.8",
     "astro": "catalog:astro",
@@ -20,7 +19,8 @@
     "check": "bunx --bun biome check --write ./src",
     "dev": "bunx --bun astro dev",
     "preview": "bunx --bun astro preview",
-    "start": "bunx --bun astro dev"
+    "start": "bunx --bun astro dev",
+    "typecheck": "bunx --bun astro check"
   },
   "type": "module",
   "version": "0.0.1"

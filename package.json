@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@biomejs/biome": "2.0.0",
+    "@biomejs/biome": "2.0.2",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@tooling/typescript": "workspace:*",
@@ -18,8 +18,8 @@
     "check": "nx run-many -t check --parallel=5",
     "dev:all": "nx run-many -t dev --parallel=5",
     "dev:content-apps": "nx run-many -t dev --parallel=5 -p docs blog landing-page",
-    "dev:dashboard": "nx run-many -t dev --parallel=5 -p server dashboard",
-    "format": "biome format --write .",
+    "dev:dashboard": "nx run-many -t dev --parallel=5 -p server dashboard native",
+    "format": "biome check --write .",
     "typecheck": "nx run-many -t typecheck --parallel=5"
   },
   "version": "0.0.1",
