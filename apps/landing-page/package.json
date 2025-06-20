@@ -21,7 +21,8 @@
     "build": "bunx --bun astro build",
     "check": "bunx --bun biome check --write ./src",
     "dev": "bunx --bun astro dev",
-    "preview": "bunx --bun astro preview"
+    "preview": "bunx --bun astro preview",
+    "typecheck": "bunx --bun astro check"
   },
   "type": "module",
   "version": "0.0.1"

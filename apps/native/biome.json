@@ -3,11 +3,12 @@
   "extends": "//",
   "files": {
     "includes": [
-      "**/src/**/*",
-      "**/.vscode/**/*",
-      "**/index.html",
-      "**/vite.config.js",
-      "!**/src/routeTree.gen.ts"
+      "src/**/*.{js,jsx,ts,tsx}",
+      "App.{js,jsx,ts,tsx}",
+      "app.config.{js,ts,json}",
+      "babel.config.js",
+      "!dist/**",
+      "!node_modules/**"
     ]
   },
   "linter": {

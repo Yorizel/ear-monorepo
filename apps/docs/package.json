@@ -20,7 +20,8 @@
     "check": "bunx --bun biome check --write ./src",
     "dev": "bunx --bun astro dev",
     "preview": "bunx --bun astro preview",
-    "start": "bunx --bun astro dev"
+    "start": "bunx --bun astro dev",
+    "typecheck": "bunx --bun astro check"
   },
   "type": "module",
   "version": "0.0.1"

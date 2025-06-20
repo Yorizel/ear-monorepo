@@ -30,20 +30,18 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "catalog:react",
-    "eslint": "^9.25.0",
-    "eslint-config-expo": "~9.2.0",
     "typescript": "catalog:development"
   },
   "main": "expo-router/entry",
   "name": "native",
   "private": true,
   "scripts": {
-    "android": "expo start --android",
-    "dev": "expo start",
-    "ios": "expo start --ios",
-    "lint": "expo lint",
-    "reset-project": "node ./scripts/reset-project.js",
-    "web": "expo start --web"
+    "typecheck": "bunx --bun tsc --noEmit ",
+    "android": "bunx --bun expo start --android",
+    "check": "bunx --bun biome check --write .",
+    "dev": "bunx --bun expo start",
+    "ios": "bunx --bun expo start --ios",
+    "web": "bunx --bun expo start --web"
   },
   "version": "1.0.0"
 }

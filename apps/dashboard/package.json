@@ -34,8 +34,9 @@
   "name": "dashboard",
   "private": true,
   "scripts": {
+    "typecheck": "bunx --bun tsc --noEmit ",
     "build": "bunx --bun vite build",
-    "check": "bunx --bun biome check --write ./src",
+    "check": "bunx --bun biome check --write .",
     "dev": "bunx --bun vite",
     "format": "bunx --bun biome format",
     "lint": "bunx --bun biome lint",
