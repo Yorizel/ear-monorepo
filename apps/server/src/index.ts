@@ -2,7 +2,7 @@ import cors from "@elysiajs/cors";
 import swagger from "@elysiajs/swagger";
 import { Elysia } from "elysia";
 import { env } from "./config/env";
-import { authService } from "./lib/auth";
+import { authService } from "./integrations/auth";
 
 const app = new Elysia()
   .use(authService)
