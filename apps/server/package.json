@@ -20,6 +20,7 @@
   },
   "name": "server",
   "scripts": {
+    "auth:generate": "bunx @better-auth/cli@latest generate --config ./src/integrations/auth.ts --output ./src/schemas/auth-schema.ts",
     "build": "bun build --compile --minify-whitespace --minify-syntax --target bun --outfile server ./src/index.ts",
     "check": "bunx --bun biome check --write .",
     "db:generate": "bunx drizzle-kit generate",
