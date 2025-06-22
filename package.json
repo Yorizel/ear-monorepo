@@ -3,7 +3,6 @@
     "@biomejs/biome": "2.0.2",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@nx/storybook": "21.1.2",
     "@nx/web": "21.1.2",
     "@tooling/typescript": "workspace:*",
     "husky": "^9.1.7",
