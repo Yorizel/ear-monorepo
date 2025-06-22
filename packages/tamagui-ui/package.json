@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@packages/config": "workspace:*",
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
+    "tamagui": "catalog:tamagui"
+  },
+  "devDependencies": {
+    "@tooling/typescript": "workspace:*",
+    "@types/react": "catalog:react",
+    "@types/react-dom": "catalog:react",
+    "typescript": "catalog:development"
+  },
+  "main": "./src/index",
+  "name": "@packages/tamagui-ui",
+  "type": "module",
+  "version": "0.0.1"
+}

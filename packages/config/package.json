@@ -1,12 +1,13 @@
 {
   "dependencies": {
-    "@tamagui/config": "^1.127.2",
-    "tamagui": "^1.127.2"
+    "@tamagui/config": "catalog:tamagui",
+    "tamagui": "catalog:tamagui"
   },
   "devDependencies": {
     "@tooling/typescript": "workspace:*",
     "typescript": "catalog:development"
   },
-  "name": "@packges/config",
-  "version": "1.0.0"
+  "name": "@packages/config",
+  "version": "1.0.0",
+  "main": "./src/index"
 }
