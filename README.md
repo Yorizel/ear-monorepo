@@ -32,24 +32,24 @@ The **EAR Stack** is more than just a template; it's a foundation for building r
 
 ## 🛠️ Technology Stack
 
-This project harmonizes a suite of cutting-edge technologies. Each was chosen for its specific strengths and ability to integrate seamlessly into the stack.
+This project brings together a best-in-class set of technologies, each chosen for their strengths and seamless integration into a unified developer experience.
 
-| Technology                                                 | Role                                                      | Location              |
-| ---------------------------------------------------------- | --------------------------------------------------------- | --------------------- |
-| [**Bun**](https://bun.sh/)                                 | JavaScript Runtime, Bundler, Package Manager              | Root                  |
-| [**Nx**](https://nx.dev/)                                  | Monorepo Management & Build System                        | Root                  |
-| [**Elysia**](https://elysiajs.com/)                        | High-performance, Type-Safe Backend Framework             | `apps/server`         |
-| [**Drizzle ORM**](https://orm.drizzle.team/)               | TypeScript ORM for SQL Databases                          | `apps/server`         |
-| [**Astro**](https://astro.build/)                          | Content-Driven Web Framework for UI                       | `apps/*`              |
-| [**React**](https://react.dev/)                            | UI Library for Dynamic Interfaces                         | `apps/*`              |
-| [**TanStack Start**](https://tanstack.com/start/latest)    | Full-stack React Framework (Router, Query)                | `apps/dashboard`      |
-| [**Expo**](https://expo.dev/)                              | Framework for Universal React Native Apps                 | `apps/native`         |
-| [**TypeScript**](https://www.typescriptlang.org/)          | End-to-End Type Safety                                    | Entire Repo           |
-| [**Tailwind CSS**](https://tailwindcss.com/)               | Utility-First CSS Framework                               | `packages/ui`         |
-| [**Tamagui**](https://tamagui.dev/)                        | Universal UI Kit for React Native & Web (**WIP**)         | `packages/ui`, `config` |
-| [**Biome**](https://biomejs.dev/)                          | High-performance Linter & Formatter                       | Entire Repo           |
-| [**Husky**](https://typicode.github.io/husky/)             | Git Hooks for Code Quality                                | `.husky/`             |
-| [**GitHub Actions**](https://github.com/features/actions)  | Continuous Integration (CI)                               | `.github/workflows`   |
+| Technology                                                 | Purpose & Strengths                                          | Location                   |
+| ---------------------------------------------------------- | ------------------------------------------------------------ | -------------------------- |
+| [**Bun**](https://bun.sh/)                                 | Ultra-fast JS/TS runtime, package manager, and bundler       | Root                       |
+| [**Nx**](https://nx.dev/)                                  | Powerful monorepo management, caching, and task orchestration| Root                       |
+| [**Elysia**](https://elysiajs.com/)                        | Blazing-fast, type-safe backend API framework                | `apps/server`              |
+| [**Drizzle ORM**](https://orm.drizzle.team/)               | End-to-end type safety for SQL databases                     | `apps/server`              |
+| [**Astro**](https://astro.build/)                          | Content-focused web framework, ships zero JS by default      | `apps/*`                   |
+| [**React**](https://react.dev/)                            | Industry-standard UI library for dynamic, interactive apps   | `apps/*`                   |
+| [**TanStack Start**](https://tanstack.com/start/latest)    | Modern full-stack React framework (routing, data, auth)      | `apps/dashboard`           |
+| [**Expo**](https://expo.dev/)                              | Universal React Native app framework for web & native        | `apps/native`              |
+| [**TypeScript**](https://www.typescriptlang.org/)          | Strict type safety across the full stack                     | Everywhere                 |
+| [**Tailwind CSS**](https://tailwindcss.com/)               | Rapid, utility-first CSS for consistent design               | `packages/ui`              |
+| [**Tamagui**](https://tamagui.dev/)                        | Universal UI kit for React Native & Web (WIP)                | `packages/ui`, `config`    |
+| [**Biome**](https://biomejs.dev/)                          | Lint, format, and code quality tool—all-in-one, fast         | Everywhere                 |
+| [**Husky**](https://typicode.github.io/husky/)             | Git hooks for enforcing code standards before commits        | `.husky/`                  |
+| [**GitHub Actions**](https://github.com/features/actions)  | Automated CI: linting, type-checks & more                    | `.github/workflows`        |
 
 ## 🏛️ Monorepo Architecture
 
