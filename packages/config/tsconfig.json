@@ -1,10 +1,4 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@packages/config/*": ["./src/*"]
-    }
-  },
   "exclude": ["node_modules", "dist"],
   "extends": "@tooling/typescript/base.json",
   "include": ["."]
