@@ -1,156 +1,223 @@
-<!-- README.md -->
-<h1 align="center">✨ EAR stack monorepo ✨</h1>
-
-<p align="center">
-  <b>Modern fullstack monorepo powered by <a href="https://elysiajs.com/">Elysia</a>, <a href="https://bun.sh/">Bun</a>, <a href="https://astro.build/">Astro</a>, <a href="https://react.dev/">React</a>, <a href="https://nx.dev/">Nx</a>, and <a href="https://pnpm.io/">pnpm</a>.</b>
+<div align="center">
+<br />
+<p>
+<img src="https://raw.githubusercontent.com/Yorizel/ear-monorepo/main/apps/landing-page/public/favicon.svg" width="100" alt="EAR Stack Logo" />
 </p>
-
+<h1 align="center">✨ EAR Stack Monorepo ✨</h1>
 <p align="center">
-  <a href="https://ear-monorepo-landing-page.vercel.app/" style="text-decoration:none;">
-    <img alt="Landing Page" src="https://img.shields.io/badge/Landing%20Page-Visit-blue?style=for-the-badge">
-  </a>
-  <a href="https://ear-monorepo-blog.vercel.app/" style="text-decoration:none;">
-    <img alt="Blog" src="https://img.shields.io/badge/Blog-Visit-green?style=for-the-badge">
-  </a>
-  <a href="https://ear-monorepo-docs.vercel.app/" style="text-decoration:none;">
-    <img alt="Docs" src="https://img.shields.io/badge/Docs-Visit-orange?style=for-the-badge">
-  </a>
-  <a href="https://ear-monorepo-dashboard.vercel.app/" style="text-decoration:none;">
-    <img alt="Dashboard" src="https://img.shields.io/badge/Dashboard-Visit-red?style=for-the-badge">
-  </a>
+A modern, type-safe, full-stack monorepo powered by <strong>E</strong>lysia, <strong>A</strong>stro, and <strong>R</strong>eact.
+<br />
+Built for developers who value performance, type safety, and an exceptional developer experience.
 </p>
+<p align="center">
+<a href="https://github.com/Yorizel/ear-monorepo/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/Yorizel/ear-monorepo?style=for-the-badge&color=orange" alt="License"></a>
+<a href="https://github.com/Yorizel/ear-monorepo/actions/workflows/check.yml"><img src="https://img.shields.io/github/actions/workflow/status/Yorizel/ear-monorepo/check.yml?branch=main&label=Biome&style=for-the-badge" alt="Biome Check Status"></a>
+<a href="https://github.com/Yorizel/ear-monorepo/actions/workflows/typecheck.yml"><img src="https://img.shields.io/github/actions/workflow/status/Yorizel/ear-monorepo/typecheck.yml?branch=main&label=TypeScript&style=for-the-badge" alt="TypeScript Check Status"></a>
+</p>
+</div>
+🚀 Why EAR Stack?
 
----
+The EAR Stack is a thoughtfully architected template designed to provide a robust foundation for modern web applications. It combines the best of backend performance, static site generation, and dynamic client-side rendering, all within a scalable monorepo.
 
-## 📦 Structure
+    ✅ End-to-End Type Safety: From your Drizzle database schema to your React frontend, enjoy autocompletion and error-checking everywhere, powered by TypeScript and Elysia's Eden client.
 
-This monorepo is organized into:
+    ⚡ High Performance: Built on Bun, the all-in-one JavaScript toolkit. Benefit from a fast runtime, bundler, and package manager. Combined with Astro's island architecture and Elysia's speed, your app will be blazing fast.
 
--   `apps/`: Core applications.
--   `packages/`: Shared code, libraries, and UI components.
--   `tooling/`: Shared tooling configurations (e.g., TypeScript).
+    🎨 Stunning UIs: Leverage a shared component library built with React and Tailwind CSS. The ui package is currently being ported to Tamagui for universal native and web components.
 
-The monorepo is managed using [Nx](https://nx.dev/). Key configuration files include `nx.json` at the root and individual project configurations.
+    📦 Scalable Architecture: The monorepo, managed by Nx, allows for clean separation of concerns, shared packages, and independent application deployment.
 
-### Applications
+    🔧 Exceptional DX: Get started instantly with pre-configured tooling, including Biome for formatting/linting, Husky for pre-commit hooks, and GitHub Actions for CI.
 
-| Directory           | Technology                 | Description                                                           |
-|---------------------|---------------------------|-----------------------------------------------------------------------|
-| `apps/blog`         | Astro                     | Static, content-focused blog application                              |
-| `apps/dashboard`    | TanStack Start (Fullstack)| Fullstack TanStack Start app for dynamic dashboards and APIs          |
-| `apps/docs`         | Astro Starlight           | Comprehensive documentation site                                      |
-| `apps/landing-page` | Astro                     | Beautiful landing page for the project                                |
-| `apps/server`       | Elysia (Bun) + Drizzle    | REST backend server and database API with authentication              |
+🛠️ Tech Stack
 
-### Packages
+This project harmonizes a suite of cutting-edge technologies to deliver a seamless development experience.
+Technology	Role	Location
+Bun	JavaScript Runtime, Bundler, Package Manager	Root
+Nx	Monorepo Management & Build System	Root
+Elysia	High-performance, Type-Safe Backend Framework	apps/server
+Drizzle ORM	TypeScript ORM for SQL Databases	apps/server
+Astro	Content-Driven Web Framework for UI	apps/*
+React	UI Library for Dynamic Interfaces	apps/*
+TanStack Start	Full-stack React Framework (Router, Query)	apps/dashboard
+Expo	Framework for Universal React Native Apps	apps/native
+TypeScript	End-to-End Type Safety	Entire Repo
+Tailwind CSS	Utility-First CSS Framework	packages/ui
+Shadcn/UI	Re-usable Components (being replaced by Tamagui)	packages/ui
+Biome	Linter, Formatter, and more	Entire Repo
+Husky & commitlint	Git Hooks for Code Quality & Conventional Commits	Root
+GitHub Actions	Continuous Integration (CI)	.github
+🏛️ Monorepo Structure
 
-| Directory                      | Technology                | Description                                         |
-|---------------------------------|--------------------------|-----------------------------------------------------|
-| `packages/brand`               | JSON                      | Shared brand assets and information (e.g., project name) |
-| `packages/eden`                | Elysia + Eden            | Type-safe client library for the Elysia backend     |
-| `packages/ui`                  | React + Tailwind/Shadcn   | Shared UI component library (will migrate to Tamagui)|
-| *(planned)* `packages/expo`    | Expo + Tamagui           | Native mobile app package (planned)                 |
+The repository is organized into apps and packages to maintain a clean and scalable architecture.
+Generated code
 
-### Tooling
+      
+.
+├── apps
+│   ├── blog/             # 📝 Astro-powered blog with MDX support
+│   ├── dashboard/        # 📊 Dynamic React dashboard with TanStack Start
+│   ├── docs/             # 📚 Documentation site with Astro Starlight
+│   ├── landing-page/     # 🌐 Stunning marketing page built with Astro & React
+│   ├── native/           # 📱 Expo (React Native) application
+│   ├── server/           # ⚙️ Elysia backend server with Drizzle ORM
+│   └── storybook/        # 🎨 (WIP) Component development environment
+│
+├── packages
+│   ├── brand/            # 🎨 Shared branding assets and tokens
+│   ├── config/           # ⚙️ (WIP) Shared Tamagui configuration
+│   ├── eden/             # 🔗 Type-safe API client for the Elysia server
+│   └── ui/               # 🧩 (WIP) Shared UI library, porting to Tamagui
+│
+└── tooling
+    └── typescript/       # 🛠️ Shared TypeScript configurations (tsconfig.json)
 
-| Directory                      | Technology                | Description                                         |
-|--------------------------------|---------------------------|-----------------------------------------------------|
-| `tooling/typescript`           | TypeScript                | Shared TypeScript configurations (`tsconfig`s)      |
+    
 
----
+IGNORE_WHEN_COPYING_START
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+🎬 Getting Started
 
-## ⚡ Technologies
+Get your local development environment up and running in a few simple steps.
+1. Prerequisites
 
-- **Monorepo:** Nx
-- **Package Manager:** pnpm
-- **Runtime (Backend/Tasks):** Bun
-- **Backend Framework:** Elysia
-- **Authentication (Backend):** Better Auth
-- **Database:** PostgreSQL (Neon)
-- **ORM:** Drizzle ORM
-- **API Client:** Eden (for Elysia)
-- **Frontend Frameworks:** Astro, React
-- **React SPA/Fullstack:** TanStack Start (powered by Vite), TanStack Router, TanStack Query, TanStack Form
-- **Styling:** Tailwind CSS, Shadcn UI (migrating to Tamagui UI)
-- **Mobile:** (Planned) Expo + Tamagui for mobile app development
-- **Linting & Formatting:** Biome
+    Node.js (v20+ is recommended for compatibility with some ecosystem tools)
 
----
+    Bun (v1.0 or higher)
 
-## 🚀 Getting Started
+2. Clone the Repository
+Generated bash
 
-### Prerequisites
+      
+git clone https://github.com/Yorizel/ear-monorepo.git
+cd ear-monorepo
 
-- **Node.js**: `^20.0.0`
-- **pnpm**: `^10.0.0` (enable with `corepack enable`)
-- **Bun**: `^1.0.0` (for `apps/server` and various Bun-specific tasks)
+    
 
-### Setup Environment Variables
+IGNORE_WHEN_COPYING_START
+Use code with caution. Bash
+IGNORE_WHEN_COPYING_END
+3. Install Dependencies
 
-This project requires environment variables for some of its applications to run correctly. Copy the example environment files and populate them with your actual values.
+This project uses bun's built-in workspace support to manage dependencies.
+Generated bash
 
-1.  **Server (`apps/server`)**:
-    ```bash
+      
+bun install
+
+    
+
+IGNORE_WHEN_COPYING_START
+Use code with caution. Bash
+IGNORE_WHEN_COPYING_END
+4. Configure Environment Variables
+
+Copy the example environment files and fill in the required values.
+
+    For the backend server:
+    Generated bash
+
+          
     cp apps/server/.env.example apps/server/.env
-    ```
-    Then, edit `apps/server/.env` with your:
-    *   `DATABASE_URL`: Your PostgreSQL connection string (e.g., from Neon).
-    *   `BETTER_AUTH_SECRET`: A long, random string for session encryption.
-    *   `BETTER_AUTH_TRUSTED_ORIGINS`: Comma-separated list of frontend URLs that can interact with the auth service (e.g., `http://localhost:3000,http://localhost:4321`).
 
-2.  **Dashboard (`apps/dashboard`)**:
-    ```bash
-    cp apps/dashboard/.env.example apps/dashboard/.env
-    ```
-    Then, edit `apps/dashboard/.env` with your:
-    *   `VITE_SERVER_URL`: The URL of your running backend server (e.g., `http://localhost:9876` for local development).
+        
 
-### Installation and Setup Steps
+    IGNORE_WHEN_COPYING_START
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/Yorizel/ear-monorepo.git
-    cd ear-monorepo
-    ```
+Use code with caution. Bash
+IGNORE_WHEN_COPYING_END
 
-2.  **Install dependencies**
-    ```bash
-    pnpm install
-    ```
-    This installs all dependencies using pnpm workspaces.
+For the dashboard:
+Generated bash
 
-3.  **Ensure Environment Variables are Set Up**
-    Follow the "Setup Environment Variables" section above before proceeding.
+      
+cp apps/dashboard/.env.example apps/dashboard/.env
 
-4.  **Run Database Migrations**
-    Navigate to the server directory and run the Drizzle Kit push command:
-    ```bash
-    cd apps/server
-    pnpm run push # This executes 'bunx drizzle-kit push'
-    cd ../..
-    ```
-    Alternatively, from the root: `pnpm --filter elysia-server push`
+    
 
-5.  **Start Development Servers**
-    ```bash
-    pnpm dev
-    ```
-    This command uses Nx (`nx run-many -t dev`) to spin up all development servers concurrently. Access the applications at their respective ports:
+IGNORE_WHEN_COPYING_START
 
-    - Landing Page (Astro): [http://localhost:4321](http://localhost:4321)
-    - Blog (Astro): [http://localhost:4322](http://localhost:4322)
-    - Docs (Astro Starlight): [http://localhost:4323](http://localhost:4323)
-    - Dashboard (TanStack Start Fullstack): [http://localhost:3000](http://localhost:3000)
-    - Server (Elysia): [http://localhost:9876](http://localhost:9876)
+    Use code with caution. Bash
+    IGNORE_WHEN_COPYING_END
 
----
+You will need to provide a DATABASE_URL for a PostgreSQL database (e.g., from Neon) and a BETTER_AUTH_SECRET.
+5. Set Up the Database
 
-## 🛠️ Available Commands
+Push the Drizzle schema to your database by running the db:push script from the server workspace.
+Generated bash
 
-These commands are run from the root of the monorepo and utilize Nx:
+      
+bun run --filter server db:push
 
-- `pnpm build` — Build all applications and packages using Nx (`nx build`).
-- `pnpm dev` — Start all development servers concurrently using Nx (`nx run-many -t dev`).
-- `pnpm lint` — Lint all code across apps and packages using Nx (`nx lint`, which triggers Biome in each package).
-- `pnpm format` — Format all code in the monorepo using Biome (`biome format --write .`).
+    
 
+IGNORE_WHEN_COPYING_START
+Use code with caution. Bash
+IGNORE_WHEN_COPYING_END
+6. Run the Development Servers
+
+Start all applications concurrently using Nx.
+Generated bash
+
+      
+bun run dev:all
+
+    
+
+IGNORE_WHEN_COPYING_START
+Use code with caution. Bash
+IGNORE_WHEN_COPYING_END
+
+This command will launch all applications. You can access them at their respective ports:
+
+    Landing Page: http://localhost:4321
+
+    Dashboard: http://localhost:3000
+
+    Blog: http://localhost:4322
+
+    Docs: http://localhost:4323
+
+    Server: http://localhost:9876
+
+📜 Available Scripts
+
+Key scripts are defined in the root package.json and can be run with bun run <script-name>.
+Root Scripts
+Script	Description
+build	Build all applications and packages for production.
+check	Run Biome linter across all projects.
+format	Format all code in the repository using Biome.
+typecheck	Run TypeScript checks across all projects.
+dev:all	Start all applications in development mode.
+dev:dashboard	Start the server, dashboard, and native apps.
+dev:content-apps	Start the docs, blog, and landing-page apps.
+Workspace-Specific Scripts
+
+Run these with bun run --filter <workspace> <script>. For example: bun run --filter server db:push.
+Script (apps/server)	Description
+db:generate	Generate a new database migration file.
+db:push	Push the current schema to the database (for development).
+auth:generate	Generate the auth schema based on the auth config.
+⚙️ Development Workflow
+Code Quality & Formatting
+
+This project uses Biome for linting and formatting. A pre-commit hook is configured with Husky to automatically format your staged files, ensuring consistent code style across the repository.
+Commit Conventions
+
+We use Conventional Commits. This is enforced by commitlint to maintain a clean and descriptive git history.
+Continuous Integration
+
+The repository is equipped with GitHub Actions workflows that run on every pull request:
+
+    check.yml: Runs bun run check to ensure code passes Biome's linter.
+
+    typecheck.yml: Runs bun run typecheck to verify TypeScript types.
+
+🤝 Contributing
+
+Contributions are welcome! If you have suggestions or find a bug, please open an issue or submit a pull request. Ensure your code adheres to the formatting and commit conventions.
+📄 License
+
+This project is licensed under the MIT License. See the LICENSE.md file for details.
