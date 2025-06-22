@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@packages/tamagui-ui": "workspace:*",
     "@packages/eden": "workspace:*",
     "@packages/ui": "workspace:*",
     "@tailwindcss/vite": "^4.0.6",
