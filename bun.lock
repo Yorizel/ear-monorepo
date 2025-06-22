@@ -180,6 +180,10 @@
         "@tamagui/config": "^1.127.2",
         "tamagui": "^1.127.2",
       },
+      "devDependencies": {
+        "@tooling/typescript": "workspace:*",
+        "typescript": "catalog:development",
+      },
     },
     "packages/eden": {
       "name": "@packages/eden",

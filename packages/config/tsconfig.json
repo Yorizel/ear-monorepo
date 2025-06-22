@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@config/*": ["./src/*"]
+    }
+  },
+  "extends": "@tooling/typescript/base.json"
+}
