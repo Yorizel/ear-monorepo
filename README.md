@@ -1,8 +1,4 @@
 <div align="center">
-  <br />
-  <p>
-    <img src="https://raw.githubusercontent.com/Yorizel/ear-monorepo/main/apps/landing-page/public/favicon.svg" width="100" alt="EAR Stack Logo" />
-  </p>
   <h1 align="center">✨ EAR Stack Monorepo ✨</h1>
   <p align="center">
     A modern, type-safe, full-stack monorepo powered by <strong>E</strong>lysia, <strong>A</strong>stro, and <strong>R</strong>eact.<br />
