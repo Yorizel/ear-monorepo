@@ -1,88 +1,89 @@
+
 <div align="center">
   <h1 align="center">✨ EAR Stack Monorepo ✨</h1>
   <p align="center">
-    A modern, type-safe, full-stack monorepo powered by <strong>E</strong>lysia, <strong>A</strong>stro, and <strong>R</strong>eact.<br />
-    Built for developers who value performance, type safety, and an exceptional developer experience.
+    An opinionated, full-stack monorepo built for performance, type-safety, and an unparalleled developer experience.
+    <br />
+    Powered by <strong>E</strong>lysia, <strong>A</strong>stro, and <strong>R</strong>eact.
   </p>
   <p align="center">
+    <a href="https://github.com/Yorizel/ear-monorepo/actions/workflows/check.yml"><img src="https://img.shields.io/github/actions/workflow/status/Yorizel/ear-monorepo/check.yml?branch=main&label=Biome&style=for-the-badge&logo=biome" alt="Biome Check Status"></a>
+    <a href="https://github.com/Yorizel/ear-monorepo/actions/workflows/typecheck.yml"><img src="https://img.shields.io/github/actions/workflow/status/Yorizel/ear-monorepo/typecheck.yml?branch=main&label=TypeScript&style=for-the-badge&logo=typescript" alt="TypeScript Check Status"></a>
+    <a href="https://conventionalcommits.org"><img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=for-the-badge" alt="Conventional Commits"></a>
     <a href="https://github.com/Yorizel/ear-monorepo/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/Yorizel/ear-monorepo?style=for-the-badge&color=orange" alt="License"></a>
-    <a href="https://github.com/Yorizel/ear-monorepo/actions/workflows/check.yml"><img src="https://img.shields.io/github/actions/workflow/status/Yorizel/ear-monorepo/check.yml?branch=main&label=Biome&style=for-the-badge" alt="Biome Check Status"></a>
-    <a href="https://github.com/Yorizel/ear-monorepo/actions/workflows/typecheck.yml"><img src="https://img.shields.io/github/actions/workflow/status/Yorizel/ear-monorepo/typecheck.yml?branch=main&label=TypeScript&style=for-the-badge" alt="TypeScript Check Status"></a>
   </p>
 </div>
 
 ---
 
-## 🚀 Why EAR Stack?
+## 🎯 Core Philosophy
 
-The EAR Stack is a thoughtfully architected template designed to provide a robust foundation for modern web applications. It combines the best of backend performance, static site generation, and dynamic client-side rendering, all within a scalable monorepo.
+The **EAR Stack** is more than just a template; it's a foundation for building robust, modern web applications without compromising on performance or developer sanity. It was born from the desire to integrate best-in-class tools into a cohesive, scalable, and delightful-to-use monorepo.
 
-- **✅ End-to-End Type Safety:** From your Drizzle database schema to your React frontend, enjoy autocompletion and error-checking everywhere, powered by TypeScript and Elysia's Eden client.
-- **⚡ High Performance:** Built on Bun, the all-in-one JavaScript toolkit. Benefit from a fast runtime, bundler, and package manager. Combined with Astro's island architecture and Elysia's speed, your app will be blazing fast.
-- **🎨 Stunning UIs:** Leverage a shared component library built with React and Tailwind CSS. The `ui` package is currently being ported to Tamagui for universal native and web components.
-- **📦 Scalable Architecture:** The monorepo, managed by Nx, allows for clean separation of concerns, shared packages, and independent application deployment.
-- **🔧 Exceptional DX:** Get started instantly with pre-configured tooling, including Biome for formatting/linting, Husky for pre-commit hooks, and GitHub Actions for CI.
+-   ✅ **End-to-End Type Safety**: We believe type safety is non-negotiable. By leveraging TypeScript across the entire stack and using [Elysia's Eden](https://elysiajs.com/plugins/eden.html) client, you get auto-completion and compile-time checks from your database schema all the way to your React components.
 
----
+-   ⚡ **Performance by Default**: This stack is built for speed. [Bun](https://bun.sh/) provides a lightning-fast runtime and toolkit. [Elysia](https://elysiajs.com/) is one of the fastest backend frameworks available. And [Astro](https://astro.build/) ships zero JavaScript by default, ensuring optimal load times for your content-driven sites.
 
-## 🛠️ Tech Stack
+-   📦 **Seamless Scalability**: The monorepo is managed with [Nx](https://nx.dev), which provides an extensible build system, intelligent caching, and a clear structure that grows with your project. Shared packages ensure code is reusable and consistent across all applications.
 
-This project harmonizes a suite of cutting-edge technologies to deliver a seamless development experience.
+-   🎨 **Universal Component-Driven UI**: The shared `packages/ui` library is being ported to [Tamagui](https://tamagui.dev), enabling you to write components once and run them on both web and native platforms. This, combined with Tailwind CSS, provides a powerful and consistent design system.
 
-| Technology    | Role                                              | Location              |
-| ------------- | ------------------------------------------------- | --------------------- |
-| **Bun**       | JavaScript Runtime, Bundler, Package Manager      | Root                  |
-| **Nx**        | Monorepo Management & Build System                | Root                  |
-| **Elysia**    | High-performance, Type-Safe Backend Framework     | `apps/server`         |
-| **Drizzle ORM**| TypeScript ORM for SQL Databases                  | `apps/server`         |
-| **Astro**     | Content-Driven Web Framework for UI               | `apps/*`              |
-| **React**     | UI Library for Dynamic Interfaces                 | `apps/*`              |
-| **TanStack Start** | Full-stack React Framework (Router, Query)   | `apps/dashboard`      |
-| **Expo**      | Framework for Universal React Native Apps         | `apps/native`         |
-| **TypeScript**| End-to-End Type Safety                            | Entire Repo           |
-| **Tailwind CSS**| Utility-First CSS Framework                     | `packages/ui`         |
-| **Shadcn/UI** | Re-usable Components (being replaced by Tamagui)  | `packages/ui`         |
-| **Biome**     | Linter, Formatter, and more                       | Entire Repo           |
-| **Husky & commitlint** | Git Hooks for Code Quality & Conventional Commits | Root          |
-| **GitHub Actions** | Continuous Integration (CI)                  | `.github`             |
+-   🔧 **Exceptional Developer Experience**: From the moment you clone the repository, you're set up for success. Pre-configured tooling for linting, formatting, git hooks, and CI/CD means you can focus on building features, not on boilerplate.
 
----
+## 🛠️ Technology Stack
 
-## 🏛️ Monorepo Structure
+This project harmonizes a suite of cutting-edge technologies. Each was chosen for its specific strengths and ability to integrate seamlessly into the stack.
 
-The repository is organized into apps and packages to maintain a clean and scalable architecture.
+| Technology                                                 | Role                                                      | Location              |
+| ---------------------------------------------------------- | --------------------------------------------------------- | --------------------- |
+| [**Bun**](https://bun.sh/)                                 | JavaScript Runtime, Bundler, Package Manager              | Root                  |
+| [**Nx**](https://nx.dev/)                                  | Monorepo Management & Build System                        | Root                  |
+| [**Elysia**](https://elysiajs.com/)                        | High-performance, Type-Safe Backend Framework             | `apps/server`         |
+| [**Drizzle ORM**](https://orm.drizzle.team/)               | TypeScript ORM for SQL Databases                          | `apps/server`         |
+| [**Astro**](https://astro.build/)                          | Content-Driven Web Framework for UI                       | `apps/*`              |
+| [**React**](https://react.dev/)                            | UI Library for Dynamic Interfaces                         | `apps/*`              |
+| [**TanStack Start**](https://tanstack.com/start/latest)    | Full-stack React Framework (Router, Query)                | `apps/dashboard`      |
+| [**Expo**](https://expo.dev/)                              | Framework for Universal React Native Apps                 | `apps/native`         |
+| [**TypeScript**](https://www.typescriptlang.org/)          | End-to-End Type Safety                                    | Entire Repo           |
+| [**Tailwind CSS**](https://tailwindcss.com/)               | Utility-First CSS Framework                               | `packages/ui`         |
+| [**Tamagui**](https://tamagui.dev/)                        | Universal UI Kit for React Native & Web (**WIP**)         | `packages/ui`, `config` |
+| [**Biome**](https://biomejs.dev/)                          | High-performance Linter & Formatter                       | Entire Repo           |
+| [**Husky**](https://typicode.github.io/husky/)             | Git Hooks for Code Quality                                | `.husky/`             |
+| [**GitHub Actions**](https://github.com/features/actions)  | Continuous Integration (CI)                               | `.github/workflows`   |
+
+## 🏛️ Monorepo Architecture
+
+The repository is organized into `apps` and `packages`, a standard and effective monorepo strategy. This structure promotes code sharing and clear separation of concerns.
 
 ```
 .
-├── apps
-│   ├── blog/             # 📝 Astro-powered blog with MDX support
-│   ├── dashboard/        # 📊 Dynamic React dashboard with TanStack Start
-│   ├── docs/             # 📚 Documentation site with Astro Starlight
-│   ├── landing-page/     # 🌐 Stunning marketing page built with Astro & React
-│   ├── native/           # 📱 Expo (React Native) application
-│   ├── server/           # ⚙️ Elysia backend server with Drizzle ORM
-│   └── storybook/        # 🎨 (WIP) Component development environment
+├── apps/
+│   ├── blog/             # 📝 Astro-powered blog. Consumes `packages/ui`.
+│   ├── dashboard/        # 📊 Dynamic React dashboard. Consumes `packages/ui` & `packages/eden`.
+│   ├── docs/             # 📚 Documentation site with Astro Starlight. Consumes `packages/ui`.
+│   ├── landing-page/     # 🌐 Marketing page built with Astro. Consumes `packages/ui`.
+│   ├── native/           # 📱 Expo (React Native) app. Will consume `packages/ui` (Tamagui).
+│   ├── server/           # ⚙️ Elysia backend. Exposes a type-safe API for other apps.
+│   └── storybook/        # 🎨 (WIP) Component development environment for `packages/ui`.
 │
-├── packages
-│   ├── brand/            # 🎨 Shared branding assets and tokens
-│   ├── config/           # ⚙️ (WIP) Shared Tamagui configuration
-│   ├── eden/             # 🔗 Type-safe API client for the Elysia server
-│   └── ui/               # 🧩 (WIP) Shared UI library, porting to Tamagui
+├── packages/
+│   ├── brand/            # 🎨 Shared branding assets and design tokens.
+│   ├── config/           # ⚙️ (WIP) Shared configuration for Tamagui.
+│   ├── eden/             # 🔗 Type-safe Eden client generated from the `server`'s API.
+│   └── ui/               # 🧩 (WIP) Shared UI library, being ported to Tamagui.
 │
-└── tooling
-    └── typescript/       # 🛠️ Shared TypeScript configurations (tsconfig.json)
+└── tooling/
+    └── typescript/       # 🛠️ Centralized TypeScript configurations (base, react, astro, etc.).
 ```
-
----
 
 ## 🎬 Getting Started
 
-Get your local development environment up and running in a few simple steps.
+Follow these steps to get your local development environment up and running.
 
 ### 1. Prerequisites
 
-- **Node.js** (`v20+` is recommended for compatibility with some ecosystem tools)
-- **Bun** (`v1.0` or higher)
+-   [Node.js](https://nodejs.org/en) (v20+ is recommended for compatibility with some ecosystem tools).
+-   [Bun](https://bun.sh/) (v1.0 or higher). Bun will be used as the package manager and runtime.
 
 ### 2. Clone the Repository
 
@@ -93,7 +94,7 @@ cd ear-monorepo
 
 ### 3. Install Dependencies
 
-This project uses Bun's built-in workspace support to manage dependencies.
+This project uses **Bun Workspaces**. The `bun install` command will install dependencies for all apps and packages in the monorepo.
 
 ```bash
 bun install
@@ -101,25 +102,24 @@ bun install
 
 ### 4. Configure Environment Variables
 
-Copy the example environment files and fill in the required values.
+You need to set up environment variables for the applications that require them.
 
-For the backend server:
+-   **Backend Server (`apps/server`):**
+    ```bash
+    cp apps/server/.env.example apps/server/.env
+    ```
+-   **Dashboard (`apps/dashboard`):**
+    ```bash
+    cp apps/dashboard/.env.example apps/dashboard/.env
+    ```
 
-```bash
-cp apps/server/.env.example apps/server/.env
-```
-
-For the dashboard:
-
-```bash
-cp apps/dashboard/.env.example apps/dashboard/.env
-```
-
-You will need to provide a `DATABASE_URL` for a PostgreSQL database (e.g., from Neon) and a `BETTER_AUTH_SECRET`.
+After copying, edit the `.env` files and provide the necessary values. You will need:
+-   A **PostgreSQL `DATABASE_URL`**. A free tier from [Neon](https://neon.tech/) is a great option.
+-   A secret string for `BETTER_AUTH_SECRET`. You can generate one with `openssl rand -hex 32`.
 
 ### 5. Set Up the Database
 
-Push the Drizzle schema to your database by running the `db:push` script from the server workspace.
+Push the Drizzle ORM schema to your PostgreSQL database. This command reads your schema files and applies the necessary changes to your database.
 
 ```bash
 bun run --filter server db:push
@@ -127,76 +127,68 @@ bun run --filter server db:push
 
 ### 6. Run the Development Servers
 
-Start all applications concurrently using Nx.
+Start all applications concurrently using the root `dev:all` script.
 
 ```bash
 bun run dev:all
 ```
 
-This command will launch all applications. You can access them at their respective ports:
+This command leverages Nx to run the `dev` script for each application in parallel. You can access them at their respective default ports:
 
-- **Landing Page:** http://localhost:4321
-- **Dashboard:** http://localhost:3000
-- **Blog:** http://localhost:4322
-- **Docs:** http://localhost:4323
-- **Server:** http://localhost:9876
-
----
+-   **Landing Page**: `http://localhost:4321`
+-   **Dashboard**: `http://localhost:3000`
+-   **Blog**: `http://localhost:4322`
+-   **Docs**: `http://localhost:4323`
+-   **Server**: `http://localhost:9876`
 
 ## 📜 Available Scripts
 
 Key scripts are defined in the root `package.json` and can be run with `bun run <script-name>`.
 
-### Root Scripts
+### Root-Level Scripts
 
-| Script         | Description                                              |
-| -------------- | --------------------------------------------------------|
-| `build`        | Build all applications and packages for production.      |
-| `check`        | Run Biome linter across all projects.                    |
-| `format`       | Format all code in the repository using Biome.           |
-| `typecheck`    | Run TypeScript checks across all projects.               |
-| `dev:all`      | Start all applications in development mode.              |
-| `dev:dashboard`| Start the server, dashboard, and native apps.            |
-| `dev:content-apps` | Start the docs, blog, and landing-page apps.         |
+| Script             | Description                                                                 |
+| ------------------ | --------------------------------------------------------------------------- |
+| `build`            | Build all applications and packages for production using Nx.                |
+| `check`            | Run Biome linter across all projects.                                       |
+| `format`           | Format all code in the repository using Biome.                              |
+| `typecheck`        | Run TypeScript compiler checks across all projects.                         |
+| `dev:all`          | Start all applications in development mode.                                 |
+| `dev:dashboard`    | Start only the `server`, `dashboard`, and `native` apps.                    |
+| `dev:content-apps` | Start only the `docs`, `blog`, and `landing-page` apps for content editing. |
 
 ### Workspace-Specific Scripts
 
-Run these with `bun run --filter <workspace> <script>`. For example: `bun run --filter server db:push`.
+To run scripts for a specific app or package, use the `bun run --filter <workspace> <script>` command.
 
-| Script (apps/server) | Description                                      |
-| -------------------- | ------------------------------------------------|
-| `db:generate`        | Generate a new database migration file.          |
-| `db:push`            | Push the current schema to the database (for development). |
-| `auth:generate`      | Generate the auth schema based on the auth config.         |
-
----
+| Command                               | Description                                                      |
+| ------------------------------------- | ---------------------------------------------------------------- |
+| `bun run --filter server db:generate` | Generate a new Drizzle database migration file based on schema changes. |
+| `bun run --filter server db:push`     | Push the current schema to the database (ideal for development). |
+| `bun run --filter server auth:generate`| Generate the auth schema based on the auth config.               |
 
 ## ⚙️ Development Workflow
 
 ### Code Quality & Formatting
 
-This project uses **Biome** for linting and formatting. A pre-commit hook is configured with Husky to automatically format your staged files, ensuring consistent code style across the repository.
+This project uses [**Biome**](https://biomejs.dev/) as an all-in-one tool for linting and formatting, which ensures code quality and a consistent style. A pre-commit hook is configured with **Husky** to automatically format your staged files, so you never have to worry about style inconsistencies.
 
 ### Commit Conventions
 
-We use **Conventional Commits**. This is enforced by commitlint to maintain a clean and descriptive git history.
+We enforce [**Conventional Commits**](https://www.conventionalcommits.org/en/v1.0.0/) using `commitlint`. This standard creates a clean, readable, and automated git history, which is crucial for changelog generation and versioning. When you commit, your message will be validated.
 
-### Continuous Integration
+### Continuous Integration (CI)
 
-The repository is equipped with GitHub Actions workflows that run on every pull request:
-
-- **check.yml:** Runs `bun run check` to ensure code passes Biome's linter.
-- **typecheck.yml:** Runs `bun run typecheck` to verify TypeScript types.
-
----
+The repository is equipped with GitHub Actions workflows found in `.github/workflows`. On every pull request, these workflows automatically:
+-   **`check.yml`**: Run `bun run check` to ensure all code passes Biome's linter.
+-   **`typecheck.yml`**: Run `bun run typecheck` to verify the project is free of TypeScript errors.
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you have suggestions or find a bug, please open an issue or submit a pull request. Ensure your code adheres to the formatting and commit conventions.
+We welcome contributions! If you have suggestions for improvements or find a bug, please feel free to open an issue or submit a pull request.
 
----
+When contributing, please ensure your code adheres to the project's formatting and commit conventions.
 
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE.md](./LICENSE.md) file for details.
-
