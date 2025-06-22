@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@config/*": ["./src/*"]
-    }
-  },
-  "extends": "@tooling/typescript/react-library.json"
-}

@@ -1,3 +1,4 @@
+import { config } from "@packages/config";
 import type { EdenClientType } from "@packages/eden";
 import appCss from "@packages/ui/globals.css?url";
 import type { QueryClient } from "@tanstack/react-query";
@@ -7,6 +8,7 @@ import {
   Outlet,
   Scripts,
 } from "@tanstack/react-router";
+import { TamaguiProvider } from "tamagui";
 import { QueryProvider } from "@/integrations/tanstack-query";
 
 interface MyRouterContext {
@@ -18,7 +20,9 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
   component: () => (
     <RootDocument>
       <QueryProvider>
-        <Outlet />
+        <TamaguiProvider config={config}>
+          <Outlet />
+        </TamaguiProvider>
       </QueryProvider>
     </RootDocument>
   ),

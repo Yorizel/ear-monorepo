@@ -7,7 +7,7 @@
     "@tooling/typescript": "workspace:*",
     "typescript": "catalog:development"
   },
+  "main": "./src/index",
   "name": "@packages/config",
-  "version": "1.0.0",
-  "main": "./src/index"
+  "version": "1.0.0"
 }
