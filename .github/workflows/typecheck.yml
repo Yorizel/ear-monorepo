@@ -1,7 +1,6 @@
 name: Typescript typechecking
 
 on:
-
   pull_request:
     branches: ["*"]
 
@@ -12,14 +11,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
         with:
-          bun-version: latest
-          
-      - name: Install dependencies
-        run: bun install 
-        
-      - name: Run check
-        run: bun run typecheck
+          fetch-depth: 0
+          filter: tree:0
+
+      - name: Bun & Nx Setup
+        uses: ./.github/actions/setup-bun-nx
+
+      - name: Run Nx affected typecheck
+        run: npx nx affected -t typecheck --base=origin/master --head=HEAD
