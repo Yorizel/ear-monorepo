@@ -7,13 +7,19 @@
     "esModuleInterop": true,
     "incremental": false,
     "isolatedModules": true,
-    "lib": ["es2022", "DOM", "DOM.Iterable"],
+    "lib": [
+      "es2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "NodeNext",
     "moduleDetection": "force",
     "moduleResolution": "NodeNext",
     "noUncheckedIndexedAccess": true,
     "paths": {
-      "@api": ["apps/server/src/index"]
+      "@api": [
+        "apps/server/src/index.ts"
+      ]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,

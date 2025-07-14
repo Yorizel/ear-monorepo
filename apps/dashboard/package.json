@@ -1,4 +1,6 @@
 {
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "dependencies": {
     "@packages/eden": "workspace:*",
     "@tailwindcss/vite": "^4.0.6",

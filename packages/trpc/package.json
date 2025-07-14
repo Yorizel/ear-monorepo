@@ -1,7 +1,7 @@
 {
-  "name": "@packages/brand",
+  "name": "@packages/trpc",
   "version": "0.1.0",
-  "description": "Branding assets and config for EarStack",
+  "description": "tRPC utilities and types for EarStack",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "exports": {
@@ -17,5 +17,9 @@
   },
   "author": "EarStack Team",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@trpc/server": "^10.0.0",
+    "@trpc/client": "^10.0.0"
+  }
 }

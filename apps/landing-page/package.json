@@ -1,4 +1,6 @@
 {
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "dependencies": {
     "@astrojs/react": "catalog:astro",
     "@lucide/astro": "catalog:astro",

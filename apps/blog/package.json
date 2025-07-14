@@ -1,4 +1,6 @@
 {
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/mdx": "^4.3.0",

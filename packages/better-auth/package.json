@@ -1,7 +1,7 @@
 {
-  "name": "@packages/brand",
+  "name": "@packages/better-auth",
   "version": "0.1.0",
-  "description": "Branding assets and config for EarStack",
+  "description": "Authentication utilities for EarStack",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "exports": {
