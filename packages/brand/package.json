@@ -1,10 +1,21 @@
 {
-  "license": "PROPRIETARY",
-  "main": "./index.json",
   "name": "@packages/brand",
-  "private": true,
-  "publishConfig": {
-    "access": "public"
+  "version": "0.1.0",
+  "description": "Branding assets and config for EarStack",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts",
+      "types": "./src/index.ts"
+    }
   },
-  "version": "0.0.0"
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "author": "EarStack Team",
+  "license": "MIT",
+  "private": true
 }

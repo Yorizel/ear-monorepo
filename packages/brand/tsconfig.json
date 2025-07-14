@@ -1,0 +1,14 @@
+{
+  "extends": "@tooling/typescript/base.json",
+  "compilerOptions": {
+    "composite": true,
+    "incremental": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "jsx": "react-jsx",
+    "types": []
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["../../node_modules/@types/mdx"]
+}

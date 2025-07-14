@@ -1,3 +1,13 @@
 {
-  "extends": "@tooling/typescript/base.json"
+  "extends": "@tooling/typescript/base.json",
+  "references": [
+    { "path": "./apps/blog" },
+    { "path": "./apps/dashboard" },
+    { "path": "./apps/docs" },
+    { "path": "./apps/landing-page" },
+    { "path": "./apps/server" },
+    { "path": "./packages/eden" },
+    { "path": "./packages/ui" },
+    { "path": "./packages/brand" }
+  ]
 }

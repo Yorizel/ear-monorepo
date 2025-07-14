@@ -1,0 +1,21 @@
+{
+  "name": "@packages/polar-sh",
+  "version": "0.1.0",
+  "description": "Plan and usage billing logic for EarStack",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts",
+      "types": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "author": "EarStack Team",
+  "license": "MIT",
+  "private": true
+}

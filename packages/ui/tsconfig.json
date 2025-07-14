@@ -3,9 +3,12 @@
     "baseUrl": ".",
     "paths": {
       "@packages/ui/*": ["./src/*"]
-    }
+    },
+    "composite": true,
+    "declaration": true
   },
   "exclude": ["node_modules", "dist"],
   "extends": "@tooling/typescript/react-library.json",
+  "references": [{ "path": "../brand" }],
   "include": ["."]
 }

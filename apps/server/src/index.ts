@@ -2,7 +2,7 @@ import cors from "@elysiajs/cors";
 import swagger from "@elysiajs/swagger";
 import { Elysia } from "elysia";
 import { env } from "./config/env";
-import { authMiddleware, OpenAPI } from "./integrations/auth";
+import { authMiddleware, OpenAPI } from "./integrations/better-auth-server";
 
 const app = new Elysia()
   .use(authMiddleware)

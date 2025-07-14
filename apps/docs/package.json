@@ -1,4 +1,6 @@
 {
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "dependencies": {
     "@astrojs/starlight": "^0.34.3",
     "@astrojs/starlight-tailwind": "^4.0.1",

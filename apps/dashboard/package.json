@@ -1,4 +1,6 @@
 {
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "dependencies": {
     "@packages/eden": "workspace:*",
     "@tailwindcss/vite": "^4.0.6",
@@ -14,6 +16,7 @@
     "react-dom": "catalog:react",
     "tailwindcss": "^4.0.6",
     "vinxi": "^0.5.3",
+    "vite-plugin-pwa": "^1.0.1",
     "vite-tsconfig-paths": "^5.1.4",
     "zod": "^3.25.42"
   },

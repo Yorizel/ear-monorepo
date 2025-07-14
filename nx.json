@@ -1,55 +1,25 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "defaultBase": "master",
-  "nxCloudId": "68476c26ddf49366d4949e4b",
-  "plugins": [
-    {
-      "options": {
-        "buildStorybookTargetName": "build-storybook",
-        "serveStorybookTargetName": "storybook",
-        "staticStorybookTargetName": "static-storybook",
-        "testStorybookTargetName": "test-storybook"
-      },
-      "plugin": "@nx/storybook/plugin"
-    }
-  ],
-  "release": {
-    "changelog": {
-      "projectChangelogs": {
-        "renderOptions": {
-          "applyUsernameToAuthors": true,
-          "authors": true,
-          "commitReferences": true,
-          "versionTitleDate": true
-        }
-      },
-      "workspaceChangelog": {
-        "renderOptions": {
-          "applyUsernameToAuthors": true,
-          "authors": true,
-          "commitReferences": true,
-          "versionTitleDate": true
-        }
-      }
-    }
-  },
   "targetDefaults": {
-    "build": {
+    "typecheck": {
       "cache": true,
-      "dependsOn": ["^build"],
+      "dependsOn": ["^typecheck"],
       "inputs": ["{projectRoot}/**/*", "{projectRoot}/.env*"],
-      "outputs": ["{projectRoot}/.next/**", "!{projectRoot}/.next/cache/**"]
+      "outputs": []
     },
-    "check-types": {
+    "check": {
       "cache": true,
-      "dependsOn": ["^check-types"]
+      "dependsOn": ["^check"],
+      "inputs": ["{projectRoot}/**/*", "{projectRoot}/.env*"],
+      "outputs": []
     },
     "dev": {
       "cache": false
-    },
-    "lint": {
-      "cache": true,
-      "dependsOn": ["^lint"]
     }
-  }
+  },
+  "tui": {
+    "enabled": true
+  },
+  "nxCloudId": "686fef677067d8bfb336fab7"
 }
